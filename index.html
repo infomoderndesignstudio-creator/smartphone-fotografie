@@ -244,9 +244,12 @@ tailwind.config = {
   <!-- HERO (full-bleed image) -->
   <div class="relative overflow-hidden">
     <!-- media -->
+    <!-- HERO-AFBEELDING: zet je gegenereerde beeld als "hero.jpg" naast dit HTML-bestand.
+         Ontbreekt het bestand, dan valt de hero automatisch terug op de originele workshopfoto. -->
     <div data-hero class="absolute inset-0">
-      <img id="heroimg" src="https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg"
-           alt="Deelnemers aan het werk tijdens een workshop smartphone fotografie" loading="eager"
+      <img id="heroimg" src="hero.jpg"
+           onerror="this.onerror=null;this.src='https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg';"
+           alt="Oudere deelnemers leren samen de mooiste foto's maken tijdens de workshop" loading="eager"
            class="w-full h-full object-cover" style="filter:saturate(1.08) contrast(1.05) brightness(.94);">
       <div class="absolute inset-0" style="background:#C8551B;mix-blend-mode:multiply;opacity:.10;"></div>
       <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(26,23,20,.5) 0%,rgba(26,23,20,.08) 34%,rgba(26,23,20,.72) 100%);"></div>
@@ -924,6 +927,23 @@ tailwind.config = {
             </div>
           </div>
           <div>
+            <label class="block text-sm font-medium mb-2">Welke workshop heeft je interesse?</label>
+            <div class="relative">
+              <select name="workshop" class="appearance-none w-full bg-white border border-[color:var(--line)] px-4 py-3.5 pr-12 outline-none focus:border-amber transition cursor-pointer text-ink">
+                <option value="" selected>Maak een keuze…</option>
+                <option value="Smartphone fotografie">Smartphone fotografie</option>
+                <option value="Spiegelreflex fotografie">Spiegelreflex fotografie</option>
+                <option value="Foto's bewerken (Snapseed)">Foto's bewerken (Snapseed)</option>
+                <option value="Filmen met je smartphone">Filmen met je smartphone</option>
+                <option value="Wie ben je?">Wie ben je?</option>
+                <option value="Keukenhof">Keukenhof</option>
+                <option value="Presentatie / lezing">Presentatie / lezing</option>
+                <option value="Weet ik nog niet / advies gewenst">Weet ik nog niet — graag advies</option>
+              </select>
+              <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-amber text-xs">▾</span>
+            </div>
+          </div>
+          <div>
             <label class="block text-sm font-medium mb-2">Uw bericht / vraag</label>
             <textarea name="bericht" rows="5" class="w-full bg-white border border-[color:var(--line)] px-4 py-3.5 outline-none focus:border-amber transition resize-none"></textarea>
           </div>
@@ -1135,11 +1155,15 @@ tailwind.config = {
       const naam = (f.get('naam')||'').toString();
       const email = (f.get('email')||'').toString();
       const tel = (f.get('tel')||'').toString();
+      const workshop = (f.get('workshop')||'').toString();
       const bericht = (f.get('bericht')||'').toString();
       const body = encodeURIComponent(
-        'Naam: ' + naam + '\nTelefoon: ' + tel + '\nE-mail: ' + email + '\n\n' + bericht
+        'Naam: ' + naam + '\nTelefoon: ' + tel + '\nE-mail: ' + email +
+        '\nWorkshop: ' + (workshop || 'niet gekozen') + '\n\n' + bericht
       );
-      const subject = encodeURIComponent('Aanvraag workshop smartphone fotografie');
+      const subject = encodeURIComponent(
+        workshop ? ('Aanvraag workshop: ' + workshop) : 'Aanvraag workshop smartphone fotografie'
+      );
       document.getElementById('formnote').classList.remove('hidden');
       window.location.href = 'mailto:info@smartphone-fotografie.nl?subject=' + subject + '&body=' + body;
     });

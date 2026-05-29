@@ -127,9 +127,17 @@ tailwind.config = {
   #heroimg { will-change:transform; animation:heroDrift 24s ease-in-out infinite alternate; }
   @keyframes heroDrift { from { transform:scale(1.03); } to { transform:scale(1.1); } }
 
+  /* infinite marquee (left -> right) */
+  .marquee { overflow:hidden; width:100%; -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
+  .marquee__track { display:flex; width:max-content; will-change:transform; animation:marqueeRTL 42s linear infinite; }
+  .marquee:hover .marquee__track { animation-play-state:paused; }
+  @keyframes marqueeRTL { from { transform:translateX(-50%); } to { transform:translateX(0); } }
+  .marquee__item { display:inline-flex; align-items:center; gap:2rem; padding-right:2rem; }
+
   @media (prefers-reduced-motion: reduce) {
     html.js [data-reveal], html.js [data-print], html.js [data-hero] { opacity:1 !important; transform:none !important; filter:none !important; }
     #heroimg { animation:none; }
+    .marquee__track { animation:none; transform:none; flex-wrap:wrap; gap:.5rem 0; }
   }
 </style>
 </head>
@@ -160,7 +168,7 @@ tailwind.config = {
       <a href="#" data-link="home" class="shrink-0">
         <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/test.png"
              alt="Smartphone Fotografie" loading="eager"
-             class="h-9 sm:h-11 w-auto max-w-[50%] object-contain" style="mix-blend-mode:multiply;">
+             class="h-9 sm:h-11 w-auto max-w-[50%] object-contain" style="filter:brightness(0);">
       </a>
 
       <!-- desktop nav -->
@@ -209,7 +217,7 @@ tailwind.config = {
 <!-- mobile menu -->
 <div id="mobnav" class="fixed inset-0 z-[55] bg-paper lg:hidden flex flex-col">
   <div class="px-5 h-[68px] flex items-center justify-between border-b border-[color:var(--line)]">
-    <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/test.png" alt="" class="h-9 w-auto max-w-[50%] object-contain" style="mix-blend-mode:multiply;">
+    <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/test.png" alt="" class="h-9 w-auto max-w-[50%] object-contain" style="filter:brightness(0);">
     <button id="menuclose" class="btn btn-ghost py-2.5 px-4 text-[0.84rem]">Sluit</button>
   </div>
   <div class="flex-1 overflow-y-auto px-6 py-8">
@@ -414,19 +422,46 @@ tailwind.config = {
   </div>
 
   <!-- CLIENTS -->
-  <div class="border-y border-[color:var(--line)]">
-    <div class="max-w-[1320px] mx-auto px-5 sm:px-6 lg:px-10 py-16">
+  <div class="border-y border-[color:var(--line)] py-16">
+    <div class="max-w-[1320px] mx-auto px-5 sm:px-6 lg:px-10">
       <p data-reveal class="eyebrow mb-8"><span class="w-8 h-px bg-amber"></span>Gewerkt voor o.a.</p>
-      <div data-reveal class="flex flex-wrap gap-x-8 gap-y-3 font-display text-xl sm:text-2xl text-inksoft/80">
-        <span>LUMC</span><span class="text-amber/40">/</span>
-        <span>ABN AMRO</span><span class="text-amber/40">/</span>
-        <span>Rabobank</span><span class="text-amber/40">/</span>
-        <span>Aegon</span><span class="text-amber/40">/</span>
-        <span>Heembouw</span><span class="text-amber/40">/</span>
-        <span>InHolland</span><span class="text-amber/40">/</span>
-        <span>Leolux</span><span class="text-amber/40">/</span>
-        <span>Van der Valk</span><span class="text-amber/40">/</span>
-        <span>Ministerie van I&amp;W</span>
+    </div>
+    <div data-reveal class="marquee">
+      <div class="marquee__track font-display text-xl sm:text-2xl text-inksoft/80">
+        <!-- group 1 -->
+        <div class="marquee__item">
+          <span>LUMC</span><span class="text-amber">/</span>
+          <span>ABN AMRO</span><span class="text-amber">/</span>
+          <span>Rabobank</span><span class="text-amber">/</span>
+          <span>Aegon</span><span class="text-amber">/</span>
+          <span>Heembouw</span><span class="text-amber">/</span>
+          <span>InHolland</span><span class="text-amber">/</span>
+          <span>Leolux</span><span class="text-amber">/</span>
+          <span>Van der Valk</span><span class="text-amber">/</span>
+          <span>Royal FloraHolland</span><span class="text-amber">/</span>
+          <span>Astellas</span><span class="text-amber">/</span>
+          <span>AstraZeneca</span><span class="text-amber">/</span>
+          <span>de Belastingdienst</span><span class="text-amber">/</span>
+          <span>Ministerie van I&amp;W</span><span class="text-amber">/</span>
+          <span>Waterschap Zuiderzeeland</span><span class="text-amber">/</span>
+        </div>
+        <!-- group 2 (duplicate for seamless loop) -->
+        <div class="marquee__item" aria-hidden="true">
+          <span>LUMC</span><span class="text-amber">/</span>
+          <span>ABN AMRO</span><span class="text-amber">/</span>
+          <span>Rabobank</span><span class="text-amber">/</span>
+          <span>Aegon</span><span class="text-amber">/</span>
+          <span>Heembouw</span><span class="text-amber">/</span>
+          <span>InHolland</span><span class="text-amber">/</span>
+          <span>Leolux</span><span class="text-amber">/</span>
+          <span>Van der Valk</span><span class="text-amber">/</span>
+          <span>Royal FloraHolland</span><span class="text-amber">/</span>
+          <span>Astellas</span><span class="text-amber">/</span>
+          <span>AstraZeneca</span><span class="text-amber">/</span>
+          <span>de Belastingdienst</span><span class="text-amber">/</span>
+          <span>Ministerie van I&amp;W</span><span class="text-amber">/</span>
+          <span>Waterschap Zuiderzeeland</span><span class="text-amber">/</span>
+        </div>
       </div>
     </div>
   </div>

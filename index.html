@@ -1,73 +1,81 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Smartphone Fotografie Workshops voor Bedrijven | Rob Turk, Sassenheim</title>
-<meta name="description" content="Incompany fotografie-workshops voor teams en personeelsverenigingen, door heel Nederland. Beter fotograferen met je smartphone, bewerken én direct printen. Vraag een workshop op maat aan.">
-<link rel="canonical" href="https://smartphone-fotografie.nl/">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- SEO -->
+<title>Smartphone Fotografie | Incompany workshops incl. printen</title>
+<meta name="description" content="Incompany workshops smartphone fotografie voor bedrijven en teams in heel Nederland. Beter leren fotograferen, bewerken met Snapseed en je foto's meteen geprint." />
+<link rel="canonical" href="https://smartphone-fotografie.nl/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#1B1714" />
 
 <!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:locale" content="nl_NL">
-<meta property="og:site_name" content="Smartphone Fotografie">
-<meta property="og:title" content="Smartphone Fotografie Workshops voor Bedrijven | Rob Turk">
-<meta property="og:description" content="Incompany fotografie-workshops voor teams en personeelsverenigingen. Beter fotograferen, bewerken én direct printen met je smartphone.">
-<meta property="og:url" content="https://smartphone-fotografie.nl/">
-<meta property="og:image" content="https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Smartphone Fotografie Workshops voor Bedrijven | Rob Turk">
-<meta name="twitter:description" content="Incompany fotografie-workshops voor teams en personeelsverenigingen. Beter fotograferen, bewerken én direct printen.">
-<meta name="twitter:image" content="https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Smartphone Fotografie" />
+<meta property="og:title" content="Smartphone Fotografie | Incompany workshops incl. printen" />
+<meta property="og:description" content="Incompany workshops smartphone fotografie voor bedrijven en teams in heel Nederland. Beter leren fotograferen, bewerken én je foto's meteen geprint." />
+<meta property="og:url" content="https://smartphone-fotografie.nl/" />
+<meta property="og:locale" content="nl_NL" />
+<meta property="og:image" content="https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg" />
+<meta property="og:image:width" content="2000" />
+<meta property="og:image:height" content="1464" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Smartphone Fotografie | Incompany workshops incl. printen" />
+<meta name="twitter:description" content="Incompany workshops smartphone fotografie voor bedrijven en teams in heel Nederland. Inclusief bewerken én printen." />
+<meta name="twitter:image" content="https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&display=swap" rel="stylesheet">
-<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="icon" href="https://smartphone-fotografie.nl/wp-content/uploads/2017/09/cropped-favicon-270x270.png" />
 
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        ink:    '#1a1413',
-        coal:   '#221a18',
-        terra:  '#b5462f',
-        terradk:'#8f3322',
-        ember:  '#d96a3f',
-        cream:  '#f3ece1',
-        sand:   '#e6dccb',
-        bone:   '#cdbfa8',
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          paper:   '#F6F2EA',
+          sand:    '#EDE5D7',
+          ink:     '#1B1714',
+          inksoft: '#5A5048',
+          accent:  '#D94F1E',
+          accentd: '#B23E13',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'Georgia', 'serif'],
+          sans: ['"Spline Sans"', 'system-ui', 'sans-serif'],
+        },
       },
-      fontFamily: {
-        display: ['Fraunces', 'serif'],
-        sans: ['"General Sans"', 'system-ui', 'sans-serif'],
-      },
-    }
-  }
-}
+    },
+  };
 </script>
 
-<!-- GSAP + ScrollTrigger + Lenis -->
+<!-- GSAP + ScrollTrigger -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<!-- Lenis smooth scroll -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-<!-- JSON-LD structured data -->
+<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://smartphone-fotografie.nl/#business",
   "name": "Smartphone Fotografie",
-  "alternateName": "Foto-workshop.nl",
-  "description": "Incompany fotografie-workshops voor bedrijven, teams en personeelsverenigingen. Beter fotograferen, bewerken en printen met de smartphone en spiegelreflex.",
-  "image": "https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg",
+  "description": "Incompany workshops smartphone fotografie, spiegelreflex fotografie, fotobewerking en filmen voor bedrijven, teams en personeelsverenigingen in heel Nederland. Inclusief het printen van de resultaten.",
   "url": "https://smartphone-fotografie.nl/",
   "telephone": "+31647769699",
   "email": "info@smartphone-fotografie.nl",
-  "founder": { "@type": "Person", "name": "Rob Turk" },
+  "image": "https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg",
+  "logo": "https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/test.png",
+  "vatID": "NL1835.83.346.B02",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Hoofdstraat 185",
@@ -75,743 +83,851 @@ tailwind.config = {
     "addressLocality": "Sassenheim",
     "addressCountry": "NL"
   },
-  "areaServed": "NL",
+  "geo": { "@type": "GeoCoordinates", "latitude": 52.2258455, "longitude": 4.5211697 },
+  "areaServed": "Nederland",
+  "parentOrganization": { "@type": "Organization", "name": "Foto-workshop.nl", "url": "https://www.foto-workshop.nl" },
   "sameAs": [
     "https://www.facebook.com/fotoworkshopnl",
-    "https://www.instagram.com/foto_workshopnl/",
     "https://twitter.com/smartfotografie",
-    "https://www.linkedin.com/pub/rob-turk/b/13/434",
-    "https://www.foto-workshop.nl"
+    "https://www.linkedin.com/in/rob-turk-434013b/",
+    "https://www.pinterest.com/fotoworkshopnl/iphone-fotografie/"
   ],
-  "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workshop smartphone fotografie incl. printen" }},
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workshop spiegelreflex fotografie" }},
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workshop foto's bewerken met Snapseed" }},
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workshop 'Wie ben je?'" }},
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lezing en presentatie smartphone fotografie" }}
-  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Fotografieworkshops",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workshop smartphone fotografie incl. printen" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workshop foto's bewerken met Snapseed" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workshop spiegelreflex fotografie" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workshop filmen met je smartphone" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lezing en presentatie smartphone fotografie" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Teambuildingworkshop Wie ben je?" } }
+    ]
+  },
   "review": [
-    { "@type": "Review", "author": {"@type":"Person","name":"Sandra Reeb Gruber"}, "publisher": {"@type":"Organization","name":"InHolland"}, "reviewBody": "De workshop smartphone fotografie was voor ons een fantastische manier om oude en nieuwe leden van ons team beter te leren kennen." },
-    { "@type": "Review", "author": {"@type":"Person","name":"Renee Korbee"}, "publisher": {"@type":"Organization","name":"Art-Vision"}, "reviewBody": "Rob heeft veel kennis van de vele mogelijkheden en legt alles op een duidelijke en geduldige wijze uit. Het is ongelofelijk hoeveel creativiteit er naar boven kwam." }
+    { "@type": "Review", "author": { "@type": "Person", "name": "Sandra Reeb Gruber" }, "reviewBody": "In drie uurtjes onder super begeleiding leren over fotografie-apps en compositie, zelf aan de slag en hilarische momenten met de wifi-printertjes. De drieluiken hangen nu in lijstjes op onze werkplek." },
+    { "@type": "Review", "author": { "@type": "Person", "name": "Renee Korbee" }, "reviewBody": "Rob heeft veel kennis van de mogelijkheden en apps en legt alles duidelijk en geduldig uit. De groep was heel enthousiast over het resultaat." },
+    { "@type": "Review", "author": { "@type": "Person", "name": "Cynthia Cornelissen" }, "reviewBody": "Hartelijk dank voor de foto's van de teamdag. We hebben echt een superdag gehad, er wordt nog veel over nagepraat door de collega's." }
   ]
 }
 </script>
 
 <style>
-  html { -webkit-text-size-adjust: 100%; }
-  body { overflow-x: hidden; background: #1a1413; }
-  ::selection { background: #b5462f; color: #f3ece1; }
+  html, body { overflow-x: hidden; max-width: 100%; }
+  body { background: var(--paper, #F6F2EA); }
+  ::selection { background: #D94F1E; color: #F6F2EA; }
 
-  .font-display { font-optical-sizing: auto; }
+  .font-display { font-family: 'Fraunces', Georgia, serif; }
+  .ink-line { background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .4s cubic-bezier(.2,.7,.2,1); }
+  .ink-line:hover { background-size: 100% 1px; }
 
-  /* Film grain overlay */
+  /* Grain overlay */
   .grain::before{
-    content:""; position:fixed; inset:0; z-index:9999; pointer-events:none; opacity:.045;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    content:""; position:fixed; inset:0; z-index:60; pointer-events:none; opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  .lens-ring{ box-shadow: 0 0 0 1px rgba(243,236,225,.10), inset 0 0 80px rgba(0,0,0,.5); }
+  /* Marquee */
+  .marquee { display:flex; width:max-content; animation: scrollx 38s linear infinite; }
+  @keyframes scrollx { to { transform: translateX(-50%); } }
+  .marquee-wrap:hover .marquee { animation-play-state: paused; }
 
-  /* Reveal base */
-  .reveal{ opacity:0; transform: translateY(28px); }
-  .reveal-img{ opacity:0; clip-path: inset(0 0 100% 0); }
+  /* Page system */
+  .page { display:none; }
+  .page.is-active { display:block; }
 
-  .nav-link{ position:relative; }
-  .nav-link::after{
-    content:""; position:absolute; left:0; bottom:-4px; height:1px; width:0; background:#d96a3f; transition:width .35s cubic-bezier(.2,.7,.3,1);
-  }
-  .nav-link:hover::after, .nav-link.active::after{ width:100%; }
+  /* Reveal base (JS animates) */
+  [data-reveal]{ will-change: transform, opacity; }
 
-  .page{ display:none; }
-  .page.active{ display:block; }
+  /* clip reveal helper */
+  .clip-img{ clip-path: inset(0 0 0 0); }
 
-  .marquee-track{ animation: marquee 38s linear infinite; }
-  @keyframes marquee{ to{ transform: translateX(-50%); } }
+  /* Mobile menu */
+  #mobileMenu{ transition: opacity .45s ease, visibility .45s ease; }
+  #mobileMenu.closed{ opacity:0; visibility:hidden; pointer-events:none; }
 
-  details > summary{ list-style:none; cursor:pointer; }
-  details > summary::-webkit-details-marker{ display:none; }
-  details[open] .faq-plus{ transform: rotate(45deg); }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  .hide-scroll::-webkit-scrollbar{ display:none; }
 
-  .photo-tilt{ transition: transform .6s cubic-bezier(.2,.7,.3,1); }
-  .photo-tilt:hover{ transform: translateY(-6px) rotate(-1deg) scale(1.015); }
-
-  .btn-terra{ transition: transform .25s, box-shadow .25s, background-color .25s; }
-  .btn-terra:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(181,70,47,.7); }
-
-  @media (prefers-reduced-motion: reduce){
-    .reveal,.reveal-img{ opacity:1!important; transform:none!important; clip-path:none!important; }
-    .marquee-track{ animation:none; }
-  }
+  details > summary { list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker { display:none; }
 </style>
 </head>
 
-<body class="grain bg-ink text-cream font-sans antialiased selection:bg-terra">
+<body class="grain bg-paper text-ink font-sans antialiased selection:bg-accent">
 
-<!-- ===================== HEADER / NAV ===================== -->
-<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500" id="siteHeader">
-  <div class="mx-auto max-w-7xl px-5 sm:px-8">
-    <div class="flex items-center justify-between h-[68px] md:h-[80px]">
-      <a href="#" data-nav="home" class="flex items-center gap-3 shrink-0 max-w-[55%]">
-        <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/test.png"
-             alt="Smartphone Fotografie" class="h-8 md:h-9 w-auto object-contain"
-             style="filter:brightness(0) invert(1)">
-      </a>
-
-      <nav class="hidden lg:flex items-center gap-8 text-[13px] tracking-wide uppercase font-medium">
-        <a class="nav-link" data-nav="home">Home</a>
-        <a class="nav-link" data-nav="workshops">Workshops</a>
-        <a class="nav-link" data-nav="over">Over Rob</a>
-        <a class="nav-link" data-nav="reviews">Reacties</a>
-        <a class="nav-link" data-nav="klanten">Klanten</a>
-        <a class="nav-link" data-nav="contact">Contact</a>
-      </nav>
-
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="tel:+31647769699" class="text-[13px] tracking-wide text-bone hover:text-cream transition">06 47 769 699</a>
-        <a data-nav="contact" class="btn-terra bg-terra text-cream px-5 py-2.5 rounded-full text-[13px] font-semibold uppercase tracking-wide cursor-pointer">Workshop aanvragen</a>
-      </div>
-
-      <button id="burger" class="lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-[5px]" aria-label="Menu">
-        <span class="block w-6 h-[2px] bg-cream transition-all duration-300" id="b1"></span>
-        <span class="block w-6 h-[2px] bg-cream transition-all duration-300" id="b2"></span>
-        <span class="block w-6 h-[2px] bg-cream transition-all duration-300" id="b3"></span>
-      </button>
+<!-- ================= UTILITY TOP BAR ================= -->
+<div class="hidden md:block w-full bg-ink text-paper/90 text-[12.5px] tracking-wide">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 h-9 flex items-center justify-between">
+    <div class="flex items-center gap-6">
+      <a href="tel:+31647769699" class="ink-line hover:text-paper">06 47 76 96 99</a>
+      <a href="mailto:info@smartphone-fotografie.nl" class="ink-line hover:text-paper">info@smartphone-fotografie.nl</a>
     </div>
-  </div>
-</header>
-
-<!-- MOBILE MENU -->
-<div id="mobileMenu" class="fixed inset-0 z-40 bg-ink/98 backdrop-blur-sm translate-x-full transition-transform duration-500 lg:hidden flex flex-col justify-center px-8">
-  <nav class="flex flex-col gap-6 text-cream">
-    <a class="font-display text-4xl" data-nav="home">Home</a>
-    <a class="font-display text-4xl" data-nav="workshops">Workshops</a>
-    <a class="font-display text-4xl" data-nav="over">Over Rob</a>
-    <a class="font-display text-4xl" data-nav="reviews">Reacties</a>
-    <a class="font-display text-4xl" data-nav="klanten">Klanten</a>
-    <a class="font-display text-4xl" data-nav="contact">Contact</a>
-  </nav>
-  <div class="mt-12 flex flex-col gap-3 text-bone">
-    <a href="tel:+31647769699" class="text-lg">06 47 769 699</a>
-    <a href="mailto:info@smartphone-fotografie.nl" class="text-lg">info@smartphone-fotografie.nl</a>
+    <div class="flex items-center gap-2 text-paper/60">
+      <span>Onderdeel van</span>
+      <a href="https://www.foto-workshop.nl" target="_blank" rel="noopener" class="text-paper/90 ink-line">foto-workshop.nl</a>
+    </div>
   </div>
 </div>
 
-<main id="app">
+<!-- ================= HEADER / NAV ================= -->
+<header id="siteHeader" class="sticky top-0 z-50 transition-all duration-300">
+  <nav class="max-w-[1280px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between" aria-label="Hoofdmenu">
+    <a href="#" data-nav="home" class="flex items-center shrink-0" aria-label="Smartphone Fotografie, naar home">
+      <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/test.png"
+           alt="Smartphone Fotografie" class="h-9 md:h-10 w-auto max-w-[50%] object-contain" width="180" height="40" />
+    </a>
 
-<!-- ============================================================= -->
-<!-- ============================ HOME ============================ -->
-<!-- ============================================================= -->
-<section class="page active" data-page="home">
-
-  <!-- HERO -->
-  <div class="relative min-h-[88svh] flex items-end overflow-hidden">
-    <img src="https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg"
-         alt="Deelnemers aan een workshop smartphone fotografie van Rob Turk"
-         class="absolute inset-0 w-full h-full object-cover" id="heroImg" fetchpriority="high">
-    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/25"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-transparent"></div>
-
-    <div class="relative mx-auto max-w-7xl px-5 sm:px-8 pb-16 md:pb-24 w-full">
-      <p class="reveal text-ember uppercase tracking-[0.3em] text-xs md:text-sm font-semibold mb-5">Incompany workshops · heel Nederland</p>
-      <h1 class="reveal font-display font-light leading-[0.92] text-[3.1rem] sm:text-7xl lg:text-[6.2rem] max-w-5xl">
-        Een teamdag waar<br>iedereen een <span class="italic text-ember">betere</span><br>fotograaf van wordt.
-      </h1>
-      <p class="reveal mt-7 max-w-xl text-base md:text-lg text-sand leading-relaxed">
-        Beter leren fotograferen met de telefoon die je altijd al op zak hebt. Zelf bewerken, samen lachen en aan het eind van de dag je mooiste foto op groot formaat uit de printer. Op locatie, op maat, door fotograaf Rob Turk.
-      </p>
-      <div class="reveal mt-9 flex flex-wrap items-center gap-4">
-        <a data-nav="contact" class="btn-terra bg-terra text-cream px-7 py-4 rounded-full font-semibold uppercase tracking-wide text-sm cursor-pointer">Vraag een workshop op maat aan</a>
-        <a data-nav="workshops" class="px-7 py-4 rounded-full font-semibold uppercase tracking-wide text-sm border border-cream/25 hover:border-cream/60 transition cursor-pointer">Bekijk de workshops</a>
-      </div>
+    <div class="hidden md:flex items-center gap-9 text-[15px] font-medium">
+      <a href="#" data-nav="home" class="nav-link relative py-1">Home</a>
+      <a href="#" data-nav="workshops" class="nav-link relative py-1">Workshops</a>
+      <a href="#" data-nav="over" class="nav-link relative py-1">Over ons</a>
+      <a href="#" data-nav="contact" class="nav-link relative py-1">Contact</a>
     </div>
 
-    <!-- scroll hint -->
-    <div class="absolute bottom-6 right-6 md:right-10 flex flex-col items-center gap-2 text-bone/70">
-      <span class="text-[10px] uppercase tracking-[0.25em] rotate-90 origin-center mb-6">Scroll</span>
-      <span class="block w-[1px] h-10 bg-bone/40 animate-pulse"></span>
-    </div>
-  </div>
-
-  <!-- TRUST STRIP -->
-  <div class="border-y border-cream/10 bg-coal">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div class="reveal"><div class="font-display text-3xl md:text-5xl text-ember">1000+</div><div class="text-xs md:text-sm text-bone uppercase tracking-wide mt-1">cursisten begeleid</div></div>
-      <div class="reveal"><div class="font-display text-3xl md:text-5xl text-ember">15+</div><div class="text-xs md:text-sm text-bone uppercase tracking-wide mt-1">jaar ervaring</div></div>
-      <div class="reveal"><div class="font-display text-3xl md:text-5xl text-ember">8–60</div><div class="text-xs md:text-sm text-bone uppercase tracking-wide mt-1">deelnemers per groep</div></div>
-      <div class="reveal"><div class="font-display text-3xl md:text-5xl text-ember">NL</div><div class="text-xs md:text-sm text-bone uppercase tracking-wide mt-1">incompany, overal</div></div>
-    </div>
-  </div>
-
-  <!-- INTRO -->
-  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 grid lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-7">
-      <p class="reveal text-ember uppercase tracking-[0.25em] text-xs font-semibold mb-5">Wat wij doen</p>
-      <h2 class="reveal font-display font-light text-4xl md:text-6xl leading-[1.02] max-w-2xl">
-        Fotografie als de leukste manier om een team dichter bij elkaar te brengen.
-      </h2>
-      <p class="reveal mt-7 text-sand text-lg leading-relaxed max-w-xl">
-        Wij verzorgen workshops fotografie voor bedrijven, groepen en personeelsverenigingen, volledig afgestemd op het fotograferen met een smartphone. Leerzaam en gezellig, met creatieve opdrachten die we aanpassen aan jullie wensen. Meestal komen we incompany naar jullie toe, door heel Nederland.
-      </p>
-      <a data-nav="over" class="reveal inline-flex items-center gap-2 mt-8 text-cream font-semibold border-b border-terra pb-1 cursor-pointer group">
-        Maak kennis met Rob <span class="group-hover:translate-x-1 transition">→</span>
+    <div class="hidden md:block">
+      <a href="#" data-nav="contact" class="group inline-flex items-center gap-2 bg-accent hover:bg-accentd text-paper text-[14px] font-semibold px-5 py-2.5 rounded-full transition-colors">
+        Plan een workshop
+        <span class="transition-transform group-hover:translate-x-0.5">→</span>
       </a>
     </div>
-    <div class="lg:col-span-5">
-      <div class="reveal-img relative photo-tilt lens-ring rounded-sm overflow-hidden">
-        <img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060712-300x201.jpg"
-             alt="Deelnemers bekijken hun afgedrukte foto's tijdens de workshop bij Heembouw" loading="lazy"
-             class="w-full h-[320px] md:h-[440px] object-cover">
-        <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-ink/90 to-transparent">
-          <p class="text-sm text-sand">Direct je resultaten printen op 15×20 cm. Mee naar huis.</p>
-        </div>
-      </div>
-    </div>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="md:hidden flex flex-col gap-[5px] p-2 -mr-2" aria-label="Open menu" aria-expanded="false">
+      <span class="block w-6 h-[2px] bg-ink transition-transform"></span>
+      <span class="block w-6 h-[2px] bg-ink transition-opacity"></span>
+      <span class="block w-6 h-[2px] bg-ink transition-transform"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div id="mobileMenu" class="closed fixed inset-0 z-[55] bg-ink text-paper md:hidden flex flex-col">
+  <div class="px-6 h-[68px] flex items-center justify-between border-b border-paper/15">
+    <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/test.png" alt="Smartphone Fotografie" class="h-9 w-auto max-w-[50%] object-contain invert brightness-0" style="filter:brightness(0) invert(1)" />
+    <button id="menuClose" class="text-paper text-3xl leading-none p-2 -mr-2" aria-label="Sluit menu">&times;</button>
   </div>
+  <nav class="flex-1 flex flex-col justify-center px-8 gap-2" aria-label="Mobiel menu">
+    <a href="#" data-nav="home" class="font-display text-5xl py-2">Home</a>
+    <a href="#" data-nav="workshops" class="font-display text-5xl py-2">Workshops</a>
+    <a href="#" data-nav="over" class="font-display text-5xl py-2">Over ons</a>
+    <a href="#" data-nav="contact" class="font-display text-5xl py-2 text-accent">Contact</a>
+  </nav>
+  <div class="px-8 pb-10 space-y-2 text-paper/70">
+    <a href="tel:+31647769699" class="block text-lg text-paper">06 47 76 96 99</a>
+    <a href="mailto:info@smartphone-fotografie.nl" class="block">info@smartphone-fotografie.nl</a>
+    <p class="text-sm pt-2">Hoofdstraat 185, 2171 BC Sassenheim</p>
+  </div>
+</div>
 
-  <!-- WORKSHOPS PREVIEW (editorial split rows) -->
-  <div class="bg-coal border-y border-cream/10">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-        <h2 class="reveal font-display font-light text-4xl md:text-6xl leading-none">Onze workshops</h2>
-        <p class="reveal text-bone max-w-md">Vijf vaste favorieten, allemaal op maat te maken voor jullie groep, thema en beschikbare tijd.</p>
-      </div>
+<main id="main">
 
-      <div class="space-y-4" id="homeWorkshops"></div>
+<!-- ============================================================= -->
+<!-- PAGE: HOME                                                     -->
+<!-- ============================================================= -->
+<section class="page is-active" data-page="home" aria-label="Home">
 
-      <div class="reveal mt-10">
-        <a data-nav="workshops" class="inline-flex items-center gap-2 text-ember font-semibold cursor-pointer group">
-          Alle workshops bekijken <span class="group-hover:translate-x-1 transition">→</span>
+  <!-- HERO -->
+  <div class="relative min-h-[calc(100svh-104px)] md:min-h-[calc(100svh-104px)] flex items-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img id="heroImg" src="https://smartphone-fotografie.nl/wp-content/uploads/2018/05/L1170848.jpg"
+           alt="Deelnemers aan een workshop smartphone fotografie bekijken hun afgedrukte foto's"
+           class="w-full h-full object-cover scale-[1.08]" width="2000" height="1464" />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-ink/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-ink/55 to-transparent"></div>
+    </div>
+
+    <div class="relative max-w-[1280px] mx-auto w-full px-6 lg:px-10 pb-12 md:pb-20 text-paper">
+      <p data-hero class="font-medium tracking-[0.22em] uppercase text-[12px] md:text-[13px] text-paper/80 mb-5">
+        Incompany fotografieworkshops · sinds jaar en dag
+      </p>
+      <h1 class="font-display font-semibold leading-[0.95] text-[clamp(2.6rem,8vw,6.2rem)] max-w-[16ch]">
+        <span data-hero class="block">Beter fotograferen</span>
+        <span data-hero class="block">met je <span class="italic text-accent">smartphone.</span></span>
+        <span data-hero class="block text-[clamp(1.4rem,3.4vw,2.4rem)] font-normal text-paper/85 mt-4 leading-tight max-w-[24ch]">
+          En je mooiste foto's nog dezelfde dag geprint in handen.
+        </span>
+      </h1>
+
+      <div data-hero class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="#" data-nav="contact" class="group inline-flex items-center gap-2 bg-accent hover:bg-accentd text-paper font-semibold px-7 py-3.5 rounded-full transition-colors">
+          Plan jullie workshop <span class="transition-transform group-hover:translate-x-1">→</span>
+        </a>
+        <a href="tel:+31647769699" class="inline-flex items-center gap-2 border border-paper/40 hover:border-paper text-paper font-medium px-6 py-3.5 rounded-full transition-colors backdrop-blur-sm">
+          Bel 06 47 76 96 99
         </a>
       </div>
-    </div>
-  </div>
 
-  <!-- HOW IT WORKS -->
-  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28">
-    <p class="reveal text-ember uppercase tracking-[0.25em] text-xs font-semibold mb-5 text-center">Hoe een dag verloopt</p>
-    <h2 class="reveal font-display font-light text-4xl md:text-6xl text-center mb-16">Van koffie tot lijstje aan de muur</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="reveal">
-        <div class="font-display text-ember text-6xl mb-4">01</div>
-        <h3 class="font-display text-2xl mb-3">Kijken &amp; ontdekken</h3>
-        <p class="text-sand leading-relaxed">We starten met heldere uitleg over compositie, licht en de verrassende mogelijkheden van je toestel en de beste foto-apps.</p>
-      </div>
-      <div class="reveal">
-        <div class="font-display text-ember text-6xl mb-4">02</div>
-        <h3 class="font-display text-2xl mb-3">Zelf aan de slag</h3>
-        <p class="text-sand leading-relaxed">In duo's of groepjes ga je creatieve opdrachten uitvoeren. Goed kijken, goed luisteren en samen tot mooie beelden komen.</p>
-      </div>
-      <div class="reveal">
-        <div class="font-display text-ember text-6xl mb-4">03</div>
-        <h3 class="font-display text-2xl mb-3">Bewerken &amp; printen</h3>
-        <p class="text-sand leading-relaxed">Je bewerkt je foto in Snapseed en print 'm via WiFi op groot formaat. Een tastbare herinnering aan een superleuke dag.</p>
+      <div data-hero class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-2 text-[13.5px] text-paper/75">
+        <span class="flex items-center gap-2"><span class="text-accent text-lg leading-none">●</span> Duizenden deelnemers leerden beter fotograferen</span>
+        <span class="flex items-center gap-2"><span class="text-accent text-lg leading-none">●</span> Incompany, door heel Nederland</span>
       </div>
     </div>
   </div>
 
-  <!-- RATING / SOCIAL PROOF STRIP -->
-  <div class="bg-terradk">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-12 flex flex-col md:flex-row items-center justify-between gap-8 text-cream">
-      <div class="reveal flex items-center gap-5">
-        <div class="text-ember text-2xl tracking-widest">★★★★★</div>
-        <p class="font-display text-2xl md:text-3xl leading-tight">Gewaardeerd door teams<br class="hidden md:block"> bij grote namen in Nederland</p>
+  <!-- CLIENT MARQUEE -->
+  <div class="bg-ink text-paper py-5 marquee-wrap overflow-hidden">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-10 mb-4">
+      <p class="text-[12px] uppercase tracking-[0.2em] text-paper/55">40+ organisaties gingen je voor</p>
+    </div>
+    <div class="marquee">
+      <div class="flex items-center gap-12 pr-12 text-paper/70 font-display text-2xl whitespace-nowrap">
+        <span>ABN AMRO</span><span>LUMC</span><span>Rabobank</span><span>Heembouw</span><span>Aegon</span><span>InHolland</span><span>AstraZeneca</span><span>Cognizant</span><span>Royal FloraHolland</span><span>Ministerie van Infrastructuur</span><span>van der Valk</span><span>GGZ Brabant</span>
       </div>
-      <div class="reveal flex items-center gap-8 text-sm">
-        <div><span class="font-display text-3xl block text-cream">1.596</span><span class="text-cream/70">Facebook-fans</span></div>
-        <div><span class="font-display text-3xl block text-cream">4</span><span class="text-cream/70">uitgelichte reacties</span></div>
-        <a data-nav="reviews" class="underline underline-offset-4 hover:text-cream/80 cursor-pointer">Lees de reacties</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- TESTIMONIAL FEATURE -->
-  <div class="mx-auto max-w-5xl px-5 sm:px-8 py-20 md:py-28 text-center">
-    <div class="reveal text-ember text-3xl mb-8">"</div>
-    <blockquote class="reveal font-display font-light text-2xl md:text-4xl leading-snug">
-      In drie uurtjes onder super begeleiding leren over fotografie-apps en compositie, zelf aan de slag en hilarische taferelen met die kleine WiFi-printertjes. De drieluiken hangen inmiddels in lijstjes aan onze 'wall of staff'.
-    </blockquote>
-    <div class="reveal mt-8 text-bone">
-      <span class="text-cream font-semibold">Sandra Reeb Gruber</span> · InHolland
-    </div>
-  </div>
-
-  <!-- CTA BANNER -->
-  <div class="relative overflow-hidden border-t border-cream/10">
-    <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/KT5A1327-1024x419.jpg"
-         alt="Groep aan het werk tijdens een fotografie-workshop" loading="lazy"
-         class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-ink/80"></div>
-    <div class="relative mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28 text-center">
-      <h2 class="reveal font-display font-light text-4xl md:text-6xl mb-6">Een teamuitje dat blijft hangen?</h2>
-      <p class="reveal text-sand text-lg max-w-xl mx-auto mb-9">Vertel ons over jullie groep en gelegenheid. We denken graag mee over thema, locatie en duur en sturen een voorstel op maat.</p>
-      <a data-nav="contact" class="reveal btn-terra inline-block bg-terra text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-wide text-sm cursor-pointer">Workshop aanvragen</a>
-    </div>
-  </div>
-
-</section>
-
-<!-- ============================================================= -->
-<!-- ========================= WORKSHOPS ========================= -->
-<!-- ============================================================= -->
-<section class="page" data-page="workshops">
-  <div class="pt-32 md:pt-44 pb-16 mx-auto max-w-7xl px-5 sm:px-8">
-    <p class="reveal text-ember uppercase tracking-[0.25em] text-xs font-semibold mb-5">Het programma</p>
-    <h1 class="reveal font-display font-light text-5xl md:text-7xl leading-[0.95] max-w-3xl">Workshops die passen bij jullie team.</h1>
-    <p class="reveal mt-6 text-sand text-lg max-w-2xl">Elke workshop is incompany te boeken door heel Nederland en aan te passen in lengte, niveau en thema. Hieronder de mogelijkheden.</p>
-  </div>
-
-  <div class="mx-auto max-w-7xl px-5 sm:px-8 pb-24 space-y-20" id="workshopDetail"></div>
-
-  <div class="bg-coal border-t border-cream/10">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 text-center">
-      <h2 class="reveal font-display font-light text-4xl md:text-5xl mb-6">Niet zeker welke workshop past?</h2>
-      <p class="reveal text-bone max-w-lg mx-auto mb-8">Bel of mail Rob. In een kort gesprek bepalen we samen wat het beste werkt voor jullie gelegenheid.</p>
-      <a data-nav="contact" class="reveal btn-terra inline-block bg-terra text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-wide text-sm cursor-pointer">Overleg de mogelijkheden</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- =========================== OVER ============================ -->
-<!-- ============================================================= -->
-<section class="page" data-page="over">
-  <div class="pt-32 md:pt-44 pb-20 mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-12 gap-12 items-center">
-    <div class="lg:col-span-6">
-      <p class="reveal text-ember uppercase tracking-[0.25em] text-xs font-semibold mb-5">Over de fotograaf</p>
-      <h1 class="reveal font-display font-light text-5xl md:text-7xl leading-[0.95]">Rob Turk</h1>
-      <p class="reveal mt-6 text-sand text-lg leading-relaxed">
-        Rob is professioneel fotograaf uit Sassenheim en oprichter van Foto-workshop.nl en Smartphone-fotografie.nl. Met duidelijke uitleg, veel zelf fotograferen, printen en gezamenlijke nabesprekingen heeft hij al duizenden mensen geholpen om betere foto's te maken.
-      </p>
-      <p class="reveal mt-4 text-sand text-lg leading-relaxed">
-        Zijn aanpak is geduldig, persoonlijk en aanstekelijk enthousiast. Of het nu een spiegelreflex is of de telefoon in je broekzak: het draait om beter leren kijken. Tijdens de workshops wordt Rob met regelmaat bijgestaan door zijn assistente Edith.
-      </p>
-      <div class="reveal mt-8 flex flex-wrap gap-3">
-        <span class="px-4 py-2 rounded-full border border-cream/15 text-sm text-bone">Professioneel fotograaf</span>
-        <span class="px-4 py-2 rounded-full border border-cream/15 text-sm text-bone">Podcast met Androidworld</span>
-        <span class="px-4 py-2 rounded-full border border-cream/15 text-sm text-bone">Eigen studio in Sassenheim</span>
-      </div>
-    </div>
-    <div class="lg:col-span-6">
-      <div class="reveal-img photo-tilt lens-ring rounded-sm overflow-hidden">
-        <img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060470-1024x768.jpg"
-             alt="Rob Turk geeft een presentatie over smartphone fotografie op de KNVB Campus in Zeist" loading="lazy"
-             class="w-full h-[380px] md:h-[520px] object-cover">
+      <div class="flex items-center gap-12 pr-12 text-paper/70 font-display text-2xl whitespace-nowrap" aria-hidden="true">
+        <span>ABN AMRO</span><span>LUMC</span><span>Rabobank</span><span>Heembouw</span><span>Aegon</span><span>InHolland</span><span>AstraZeneca</span><span>Cognizant</span><span>Royal FloraHolland</span><span>Ministerie van Infrastructuur</span><span>van der Valk</span><span>GGZ Brabant</span>
       </div>
     </div>
   </div>
 
-  <!-- Approach + image grid -->
-  <div class="bg-coal border-y border-cream/10">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 md:py-28">
-      <h2 class="reveal font-display font-light text-4xl md:text-6xl mb-12 max-w-2xl">Beter fotograferen, samen, met plezier</h2>
-      <div class="grid md:grid-cols-2 gap-4">
-        <div class="reveal-img photo-tilt rounded-sm overflow-hidden">
-          <img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060658-300x203.jpg" alt="Foto's razendsnel printen via WiFi op formaat 15 bij 20" loading="lazy" class="w-full h-72 object-cover">
-        </div>
-        <div class="reveal-img photo-tilt rounded-sm overflow-hidden">
-          <img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060697-300x256.jpg" alt="Foto's selecteren en bewerken met de app Snapseed" loading="lazy" class="w-full h-72 object-cover">
-        </div>
-      </div>
-      <p class="reveal mt-10 text-sand text-lg leading-relaxed max-w-3xl">
-        We werken met twee supersnelle printers, een uitgebreide hand-out over Snapseed en creatieve opdrachten die we afstemmen op jullie wensen. Wij beschikken over een mooie workshopruimte, maar werken het liefst incompany op jullie eigen locatie. Alles is mogelijk om de dag te laten slagen.
-      </p>
-    </div>
-  </div>
-
-  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 text-center">
-    <h2 class="reveal font-display font-light text-4xl md:text-5xl mb-6">Benieuwd wat Rob voor jullie team kan betekenen?</h2>
-    <a data-nav="contact" class="reveal btn-terra inline-block bg-terra text-cream px-8 py-4 rounded-full font-semibold uppercase tracking-wide text-sm cursor-pointer mt-4">Neem contact op</a>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- ========================== REVIEWS ========================== -->
-<!-- ============================================================= -->
-<section class="page" data-page="reviews">
-  <div class="pt-32 md:pt-44 pb-16 mx-auto max-w-7xl px-5 sm:px-8">
-    <p class="reveal text-ember uppercase tracking-[0.25em] text-xs font-semibold mb-5">Reacties</p>
-    <h1 class="reveal font-display font-light text-5xl md:text-7xl leading-[0.95] max-w-3xl">Wat deelnemers en opdrachtgevers zeggen.</h1>
-    <p class="reveal mt-6 text-sand text-lg max-w-2xl">Echte reacties van teams die een workshop bij ons volgden. Met naam en organisatie erbij.</p>
-  </div>
-
-  <div class="mx-auto max-w-7xl px-5 sm:px-8 pb-24 grid md:grid-cols-2 gap-6" id="reviewGrid"></div>
-
-  <div class="bg-coal border-t border-cream/10">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-16 text-center">
-      <p class="reveal text-bone mb-2">Wij kunnen op aanvraag referenties verstrekken van bedrijven die het afgelopen jaar bij ons workshops hebben geboekt.</p>
-      <a data-nav="klanten" class="reveal text-ember font-semibold underline underline-offset-4 cursor-pointer">Bekijk een greep uit onze klanten →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- ========================== KLANTEN ========================== -->
-<!-- ============================================================= -->
-<section class="page" data-page="klanten">
-  <div class="pt-32 md:pt-44 pb-12 mx-auto max-w-7xl px-5 sm:px-8">
-    <p class="reveal text-ember uppercase tracking-[0.25em] text-xs font-semibold mb-5">Vertrouwd door</p>
-    <h1 class="reveal font-display font-light text-5xl md:text-7xl leading-[0.95] max-w-3xl">Een greep uit de organisaties die ons boekten.</h1>
-    <p class="reveal mt-6 text-sand text-lg max-w-2xl">Van ziekenhuizen en banken tot ministeries, gemeenten en architecten. Wij worden geregeld ingezet bij grote evenementen met meerdere workshops tegelijk.</p>
-  </div>
-
-  <!-- marquee -->
-  <div class="py-8 overflow-hidden border-y border-cream/10 bg-coal">
-    <div class="flex w-max marquee-track" id="logoMarquee"></div>
-  </div>
-
-  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-16">
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-cream/10 rounded-sm overflow-hidden" id="clientGrid"></div>
-  </div>
-
-  <div class="bg-terradk">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-16 text-center text-cream">
-      <h2 class="reveal font-display font-light text-3xl md:text-5xl mb-6">Bij jullie organisatie de volgende?</h2>
-      <a data-nav="contact" class="reveal btn-terra inline-block bg-cream text-ink px-8 py-4 rounded-full font-semibold uppercase tracking-wide text-sm cursor-pointer">Plan een workshop</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- ========================== CONTACT ========================== -->
-<!-- ============================================================= -->
-<section class="page" data-page="contact">
-  <div class="pt-32 md:pt-44 pb-24 mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-12 gap-12">
-    <div class="lg:col-span-5">
-      <p class="reveal text-ember uppercase tracking-[0.25em] text-xs font-semibold mb-5">Contact</p>
-      <h1 class="reveal font-display font-light text-5xl md:text-7xl leading-[0.95]">Laten we het<br>plannen.</h1>
-      <p class="reveal mt-6 text-sand text-lg leading-relaxed max-w-md">
-        Op zoek naar een leuke activiteit voor de personeelsvereniging, een bedrijfsuitje of relatiedag? Vul het formulier in of bel ons gerust. We denken graag mee.
-      </p>
-
-      <div class="reveal mt-10 space-y-5 text-sand">
-        <a href="tel:+31647769699" class="flex items-center gap-4 group">
-          <span class="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center text-ember group-hover:bg-terra group-hover:text-cream group-hover:border-terra transition">✆</span>
-          <span><span class="block text-xs uppercase tracking-wide text-bone">Bellen</span>06 47 769 699</span>
+  <!-- INTRO / USP -->
+  <section class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 md:py-28">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
+      <div class="lg:col-span-7">
+        <p data-reveal class="text-accent font-semibold tracking-wide uppercase text-[13px] mb-5">Waarom een workshop bij ons</p>
+        <h2 data-reveal class="font-display text-[clamp(1.9rem,4.4vw,3.4rem)] leading-[1.05] font-medium max-w-[18ch]">
+          Iedereen heeft een camera op zak. Wij leren je <span class="italic text-accent">hem echt gebruiken.</span>
+        </h2>
+        <p data-reveal class="mt-7 text-lg text-inksoft leading-relaxed max-w-[58ch]">
+          Een dag samen aan de slag met je team, je personeelsvereniging of je relaties. Je leert compositie, licht en de slimste foto-apps kennen, je bewerkt je beelden meteen op je telefoon en je print de mooiste resultaten ter plekke op groot formaat. Leerzaam, creatief en bovenal gezellig.
+        </p>
+        <a data-reveal href="#" data-nav="workshops" class="inline-flex items-center gap-2 mt-8 font-semibold text-ink ink-line">
+          Bekijk alle workshops <span>→</span>
         </a>
-        <a href="mailto:info@smartphone-fotografie.nl" class="flex items-center gap-4 group">
-          <span class="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center text-ember group-hover:bg-terra group-hover:text-cream group-hover:border-terra transition">✉</span>
-          <span><span class="block text-xs uppercase tracking-wide text-bone">Mailen</span>info@smartphone-fotografie.nl</span>
-        </a>
-        <div class="flex items-center gap-4">
-          <span class="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center text-ember">⌖</span>
-          <span><span class="block text-xs uppercase tracking-wide text-bone">Bezoekadres</span>Hoofdstraat 185, 2171 BC Sassenheim</span>
+      </div>
+
+      <div data-reveal class="lg:col-span-5 relative">
+        <div class="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-xl shadow-ink/10">
+          <img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060712-300x201.jpg"
+               alt="Deelnemers bekijken hun afgedrukte foto's tijdens een workshop bij Heembouw" class="w-full h-full object-cover" loading="lazy" width="300" height="201" />
+        </div>
+        <div class="absolute -bottom-8 -left-6 w-2/3 rounded-2xl overflow-hidden aspect-[3/2] border-4 border-paper shadow-xl shadow-ink/15 hidden sm:block">
+          <img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060658-300x203.jpg"
+               alt="Foto's razendsnel printen via wifi op formaat 15 bij 20 centimeter" class="w-full h-full object-cover" loading="lazy" width="300" height="203" />
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="lg:col-span-7">
-      <div class="reveal bg-coal border border-cream/10 rounded-md p-7 md:p-10">
-        <form id="contactForm" class="space-y-5">
-          <div class="grid sm:grid-cols-2 gap-5">
+  <!-- WORKSHOPS PREVIEW (editorial rows) -->
+  <section class="bg-sand py-20 md:py-28">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+      <div class="flex items-end justify-between mb-14 flex-wrap gap-4">
+        <h2 data-reveal class="font-display text-[clamp(1.8rem,4vw,3rem)] font-medium leading-none">Onze workshops</h2>
+        <a data-reveal href="#" data-nav="workshops" class="font-semibold ink-line">Alles bekijken →</a>
+      </div>
+
+      <div class="space-y-4">
+        <!-- row -->
+        <article data-reveal class="group grid md:grid-cols-12 gap-6 md:gap-10 items-center bg-paper rounded-2xl p-4 md:p-6 hover:shadow-lg hover:shadow-ink/5 transition-shadow">
+          <div class="md:col-span-5 rounded-xl overflow-hidden aspect-[16/9]">
+            <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/KT5A1327-1024x419.jpg" alt="Workshop smartphone fotografie in volle gang" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width="1024" height="419" />
+          </div>
+          <div class="md:col-span-7 flex items-start gap-5">
+            <span class="font-display text-accent text-2xl pt-1">01</span>
             <div>
-              <label class="block text-xs uppercase tracking-wide text-bone mb-2">Voor- en achternaam *</label>
-              <input required name="naam" type="text" class="w-full bg-ink border border-cream/15 rounded-md px-4 py-3 text-cream focus:border-terra focus:outline-none transition">
-            </div>
-            <div>
-              <label class="block text-xs uppercase tracking-wide text-bone mb-2">Organisatie</label>
-              <input name="org" type="text" class="w-full bg-ink border border-cream/15 rounded-md px-4 py-3 text-cream focus:border-terra focus:outline-none transition">
+              <h3 class="font-display text-2xl md:text-[1.8rem] font-medium">Smartphone fotografie incl. printen</h3>
+              <p class="text-inksoft mt-2 leading-relaxed max-w-[52ch]">Voor iedereen met een iOS of Android toestel. Beter fotograferen met de techniek die je al in je broekzak hebt, en je beelden meteen geprint op twee supersnelle printers.</p>
             </div>
           </div>
-          <div class="grid sm:grid-cols-2 gap-5">
+        </article>
+
+        <article data-reveal class="group grid md:grid-cols-12 gap-6 md:gap-10 items-center bg-paper rounded-2xl p-4 md:p-6 hover:shadow-lg hover:shadow-ink/5 transition-shadow">
+          <div class="md:col-span-5 rounded-xl overflow-hidden aspect-[16/9] md:order-2">
+            <img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060697-300x256.jpg" alt="Foto's bewerken met de app Snapseed op een smartphone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width="300" height="256" />
+          </div>
+          <div class="md:col-span-7 flex items-start gap-5 md:order-1">
+            <span class="font-display text-accent text-2xl pt-1">02</span>
             <div>
-              <label class="block text-xs uppercase tracking-wide text-bone mb-2">E-mailadres *</label>
-              <input required name="email" type="email" class="w-full bg-ink border border-cream/15 rounded-md px-4 py-3 text-cream focus:border-terra focus:outline-none transition">
+              <h3 class="font-display text-2xl md:text-[1.8rem] font-medium">Foto's bewerken met Snapseed</h3>
+              <p class="text-inksoft mt-2 leading-relaxed max-w-[52ch]">Rechtzetten, uitsnijden, lokaal bewerken, verscherpen en filteren. Bijna alle mogelijkheden van professionele software, gebouwd in één gebruiksvriendelijke gratis app.</p>
+            </div>
+          </div>
+        </article>
+
+        <article data-reveal class="group grid md:grid-cols-12 gap-6 md:gap-10 items-center bg-paper rounded-2xl p-4 md:p-6 hover:shadow-lg hover:shadow-ink/5 transition-shadow">
+          <div class="md:col-span-5 rounded-xl overflow-hidden aspect-[16/9]">
+            <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/spiegelreflex.jpg" alt="Deelnemers werken met een spiegelreflexcamera tijdens de workshop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width="800" height="533" />
+          </div>
+          <div class="md:col-span-7 flex items-start gap-5">
+            <span class="font-display text-accent text-2xl pt-1">03</span>
+            <div>
+              <h3 class="font-display text-2xl md:text-[1.8rem] font-medium">Spiegelreflex fotografie</h3>
+              <p class="text-inksoft mt-2 leading-relaxed max-w-[52ch]">Fotografie als middel om creatief samen te werken en beter te leren kijken. Met Canon EOS camera's en laptops, en de opdrachten van de dag geprint op groot formaat om mee naar huis te nemen.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="bg-ink text-paper py-16 md:py-20">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-10 grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6">
+      <div data-reveal>
+        <p class="font-display text-5xl md:text-6xl text-accent"><span data-count="1000">0</span>+</p>
+        <p class="mt-2 text-paper/70 text-sm md:text-base">deelnemers leerden beter fotograferen</p>
+      </div>
+      <div data-reveal>
+        <p class="font-display text-5xl md:text-6xl text-accent"><span data-count="40">0</span>+</p>
+        <p class="mt-2 text-paper/70 text-sm md:text-base">bedrijven en instellingen gingen je voor</p>
+      </div>
+      <div data-reveal>
+        <p class="font-display text-5xl md:text-6xl text-accent"><span data-count="7">0</span></p>
+        <p class="mt-2 text-paper/70 text-sm md:text-base">workshopvormen, volledig op maat</p>
+      </div>
+      <div data-reveal>
+        <p class="font-display text-5xl md:text-6xl text-accent">NL</p>
+        <p class="mt-2 text-paper/70 text-sm md:text-base">incompany, door het hele land</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 md:py-28">
+    <p data-reveal class="text-accent font-semibold uppercase tracking-wide text-[13px] mb-5">Wat deelnemers zeggen</p>
+    <h2 data-reveal class="font-display text-[clamp(1.8rem,4vw,3rem)] font-medium leading-tight max-w-[20ch] mb-14">Daar wordt nog dagen over nagepraat.</h2>
+
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-12">
+      <blockquote data-reveal class="border-l-2 border-accent pl-6">
+        <p class="font-display text-xl md:text-2xl leading-snug">"In drie uurtjes onder super begeleiding leren over fotografie-apps en compositie, zelf aan de slag, en hilarische taferelen met de wifi-printertjes. De drieluiken hangen nu in lijstjes op onze werkplek, elke dag een leuke reminder."</p>
+        <footer class="mt-4 text-sm text-inksoft"><span class="font-semibold text-ink">Sandra Reeb Gruber</span> · InHolland</footer>
+      </blockquote>
+
+      <blockquote data-reveal class="border-l-2 border-accent pl-6">
+        <p class="font-display text-xl md:text-2xl leading-snug">"Rob heeft veel kennis van de vele mogelijkheden en apps en legt alles duidelijk en geduldig uit. De groep was heel enthousiast over het resultaat. Ongelofelijk hoeveel creativiteit er naar boven kwam."</p>
+        <footer class="mt-4 text-sm text-inksoft"><span class="font-semibold text-ink">Renee Korbee</span> · Art-Vision</footer>
+      </blockquote>
+
+      <blockquote data-reveal class="border-l-2 border-accent pl-6">
+        <p class="font-display text-xl md:text-2xl leading-snug">"Hartelijk dank voor de foto's van de teamdag. We hebben echt een superdag gehad, er wordt nog veel over nagepraat door de collega's."</p>
+        <footer class="mt-4 text-sm text-inksoft"><span class="font-semibold text-ink">Cynthia Cornelissen</span> · GHOR Brabant</footer>
+      </blockquote>
+
+      <blockquote data-reveal class="border-l-2 border-accent pl-6">
+        <p class="font-display text-xl md:text-2xl leading-snug">"Nogmaals dank voor de zeer geslaagde workshop. Iedereen was na afloop erg enthousiast. Graag tot een volgende keer."</p>
+        <footer class="mt-4 text-sm text-inksoft"><span class="font-semibold text-ink">Hedzer de Haan</span> · Tandartspraktijk de Haan</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- WIE BEN JE feature -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/slidebanner4.jpg" alt="De teambuildingworkshop Wie ben je in de praktijk" class="w-full h-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-ink/75"></div>
+    </div>
+    <div class="relative max-w-[1280px] mx-auto px-6 lg:px-10 py-24 md:py-32 text-paper">
+      <p data-reveal class="text-accent font-semibold uppercase tracking-wide text-[13px] mb-5">Signatuur · teambuilding</p>
+      <h2 data-reveal class="font-display text-[clamp(2rem,5vw,4rem)] font-medium leading-[1.02] max-w-[16ch]">"Wie ben je?" Leer je team echt kennen.</h2>
+      <p data-reveal class="mt-6 text-lg text-paper/85 max-w-[60ch] leading-relaxed">In duo's maak je een drieluik van elkaar. Dan moet je niet alleen goed kijken, maar ook goed luisteren. Een verrassend persoonlijke manier om nieuwe en oude collega's dichter bij elkaar te brengen, met een blijvend resultaat aan de muur.</p>
+      <a data-reveal href="#" data-nav="workshops" class="inline-flex items-center gap-2 mt-8 bg-paper text-ink font-semibold px-6 py-3.5 rounded-full hover:bg-accent hover:text-paper transition-colors">Ontdek deze workshop →</a>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 md:py-28">
+    <div data-reveal class="rounded-3xl bg-accent text-paper px-8 md:px-16 py-14 md:py-20 text-center">
+      <h2 class="font-display text-[clamp(2rem,5vw,3.6rem)] font-medium leading-[1.05] max-w-[20ch] mx-auto">Klaar om met je team op pad te gaan?</h2>
+      <p class="mt-5 text-paper/90 text-lg max-w-[52ch] mx-auto">Vertel ons over je groep en je gelegenheid. We denken graag mee over de invulling en de locatie.</p>
+      <div class="mt-9 flex flex-wrap justify-center gap-4">
+        <a href="#" data-nav="contact" class="bg-ink text-paper font-semibold px-8 py-4 rounded-full hover:bg-paper hover:text-ink transition-colors">Vraag een voorstel aan</a>
+        <a href="tel:+31647769699" class="border border-paper/60 hover:border-paper font-medium px-7 py-4 rounded-full transition-colors">Bel 06 47 76 96 99</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================= -->
+<!-- PAGE: WORKSHOPS                                                -->
+<!-- ============================================================= -->
+<section class="page" data-page="workshops" aria-label="Workshops">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 pt-16 md:pt-24 pb-10">
+    <p data-reveal class="text-accent font-semibold uppercase tracking-wide text-[13px] mb-4">Aanbod</p>
+    <h1 data-reveal class="font-display text-[clamp(2.4rem,6vw,5rem)] font-medium leading-[0.98] max-w-[15ch]">Workshops, volledig op maat.</h1>
+    <p data-reveal class="mt-6 text-lg text-inksoft max-w-[62ch] leading-relaxed">Van 2 uur tot een hele dag, voor groepen vanaf ongeveer 10 personen, bij jullie op locatie of in onze ruimte in Sassenheim. Het thema bepalen we samen. Elke workshop is leerzaam, creatief en gezellig.</p>
+  </div>
+
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 pb-24 space-y-14 md:space-y-20">
+
+    <!-- 01 -->
+    <article data-reveal class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+      <div class="rounded-2xl overflow-hidden aspect-[4/3] order-1">
+        <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/KT5A6103-4-300x200.jpg" alt="Deelnemers fotograferen actief tijdens de smartphoneworkshop" class="w-full h-full object-cover" loading="lazy" width="300" height="200" />
+      </div>
+      <div class="order-2">
+        <span class="font-display text-accent text-xl">01</span>
+        <h2 class="font-display text-3xl md:text-4xl font-medium mt-1">Smartphone fotografie incl. printen</h2>
+        <p class="mt-4 text-inksoft leading-relaxed">De smartphone is niet meer weg te denken als camera. Je leert de nieuwste techniek in je toestel benutten, werkt met verschillende camera-apps en bewerkt je beelden direct op telefoon of tablet. Je print je foto's zelf via wifi op twee supersnelle printers. Altijd verrassend hoe divers de resultaten zijn als ze straks in een passe-partout zitten.</p>
+        <a href="#" data-workshop="Smartphone fotografie incl. printen" class="inline-flex items-center gap-2 mt-6 font-semibold ink-line">Vraag deze workshop aan →</a>
+      </div>
+    </article>
+
+    <!-- 02 -->
+    <article data-reveal class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+      <div class="rounded-2xl overflow-hidden aspect-[4/3] lg:order-2">
+        <img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060670-300x182.jpg" alt="Een foto bewerken op de smartphone met Snapseed" class="w-full h-full object-cover" loading="lazy" width="300" height="182" />
+      </div>
+      <div class="lg:order-1">
+        <span class="font-display text-accent text-xl">02</span>
+        <h2 class="font-display text-3xl md:text-4xl font-medium mt-1">Foto's bewerken met Snapseed</h2>
+        <p class="mt-4 text-inksoft leading-relaxed">Je mooiste beelden uitzoeken en ze net dat beetje mooier maken. Rechtzetten, uitsnijden, lokaal bewerken, verscherpen, tekst toevoegen en filters inzetten, met behoud van je originelen. Daarna deel je ze gericht op Instagram, Facebook en meer. Ideaal voor personeelsverenigingen, fotoclubs en iedereen die slim wil archiveren.</p>
+        <a href="#" data-workshop="Foto's bewerken met Snapseed" class="inline-flex items-center gap-2 mt-6 font-semibold ink-line">Vraag deze workshop aan →</a>
+      </div>
+    </article>
+
+    <!-- 03 -->
+    <article data-reveal class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+      <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+        <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/spiegelreflex-2-300x200.jpg" alt="Werken met spiegelreflexcamera's tijdens een workshop voor bedrijven" class="w-full h-full object-cover" loading="lazy" width="300" height="200" />
+      </div>
+      <div>
+        <span class="font-display text-accent text-xl">03</span>
+        <h2 class="font-display text-3xl md:text-4xl font-medium mt-1">Spiegelreflex fotografie</h2>
+        <p class="mt-4 text-inksoft leading-relaxed">Fotografie als middel om creatief samen te werken, beter te leren kijken en beter te leren fotograferen. Met Canon EOS camera's en laptops voor wie geen eigen toestel heeft. De opdrachten van de dag print je op groot formaat en neem je mee naar huis. Voor teambuilding schakelen we desgewenst een coach in.</p>
+        <a href="#" data-workshop="Spiegelreflex fotografie" class="inline-flex items-center gap-2 mt-6 font-semibold ink-line">Vraag deze workshop aan →</a>
+      </div>
+    </article>
+
+    <!-- 04 -->
+    <article data-reveal class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+      <div class="rounded-2xl overflow-hidden aspect-[4/3] lg:order-2">
+        <img src="https://smartphone-fotografie.nl/wp-content/uploads/2018/10/1DX_9881-2.jpg" alt="Filmen met de smartphone tijdens een workshop" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div class="lg:order-1">
+        <span class="font-display text-accent text-xl">04</span>
+        <h2 class="font-display text-3xl md:text-4xl font-medium mt-1">Filmen met je smartphone</h2>
+        <p class="mt-4 text-inksoft leading-relaxed">Je leert interessante video's maken met je smartphone, inclusief het monteren van de shots. Geluid toevoegen, titels invoegen en overgangen optimaal gebruiken komen allemaal aan bod. Een creatieve en leerzame workshop, ook te volgen via onze site smartphonefilmen.nl.</p>
+        <a href="#" data-workshop="Filmen met je smartphone" class="inline-flex items-center gap-2 mt-6 font-semibold ink-line">Vraag deze workshop aan →</a>
+      </div>
+    </article>
+
+    <!-- 05 -->
+    <article data-reveal class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+      <div class="rounded-2xl overflow-hidden aspect-[4/3]">
+        <img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060470-1024x768.jpg" alt="Presentatie over smartphone fotografie voor medewerkers op de KNVB Campus" class="w-full h-full object-cover" loading="lazy" width="1024" height="768" />
+      </div>
+      <div>
+        <span class="font-display text-accent text-xl">05</span>
+        <h2 class="font-display text-3xl md:text-4xl font-medium mt-1">Lezing en presentatie</h2>
+        <p class="mt-4 text-inksoft leading-relaxed">Een heldere presentatie over de kracht van smartphone fotografie voor je teamdag. De focus ligt op beter fotograferen, je beelden bewerken op telefoon of tablet en foto's optimaal inzetten voor social media. Interactief, zodat deelnemers in de zaal zelf content aanleveren en betrokkenheid voelen.</p>
+        <a href="#" data-workshop="Lezing en presentatie smartphone fotografie" class="inline-flex items-center gap-2 mt-6 font-semibold ink-line">Vraag deze workshop aan →</a>
+      </div>
+    </article>
+
+    <!-- 06 + 07 compact -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <article data-reveal class="bg-sand rounded-2xl p-8 md:p-10">
+        <span class="font-display text-accent text-xl">06</span>
+        <h2 class="font-display text-2xl md:text-3xl font-medium mt-1">"Wie ben je?"</h2>
+        <p class="mt-3 text-inksoft leading-relaxed">In duo's beeld je elkaar uit in een drieluik, waarbij hobby, vakgebied of uitstraling naar voren komt. Eerst echt contact leggen, dan samen kiezen welke foto's de ander het beste weergeven. Een mooie opening voor nieuwe collega's of relaties.</p>
+        <a href="#" data-workshop="Workshop Wie ben je?" class="inline-flex items-center gap-2 mt-5 font-semibold ink-line">Aanvragen →</a>
+      </article>
+      <article data-reveal class="bg-sand rounded-2xl p-8 md:p-10">
+        <span class="font-display text-accent text-xl">07</span>
+        <h2 class="font-display text-2xl md:text-3xl font-medium mt-1">Keukenhof</h2>
+        <p class="mt-3 text-inksoft leading-relaxed">Een bijzondere fotoworkshop op locatie in een van de mooiste bloementuinen van het land. Leer compositie en licht toepassen tussen de tulpen, met volop ruimte om creatief te experimenteren. Seizoensgebonden, dus tijdig plannen loont.</p>
+        <a href="#" data-workshop="Workshop Keukenhof" class="inline-flex items-center gap-2 mt-5 font-semibold ink-line">Aanvragen →</a>
+      </article>
+    </div>
+  </div>
+
+  <!-- VOOR WIE -->
+  <section class="bg-ink text-paper py-20 md:py-24">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+      <h2 data-reveal class="font-display text-[clamp(1.8rem,4vw,3rem)] font-medium mb-10">Voor wie organiseren we?</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div data-reveal><p class="font-display text-2xl text-accent mb-2">Teams</p><p class="text-paper/70">Een leerzaam en verbindend bedrijfsuitje waar collega's elkaar anders leren kennen.</p></div>
+        <div data-reveal><p class="font-display text-2xl text-accent mb-2">Personeelsverenigingen</p><p class="text-paper/70">Een gezellige activiteit met een creatief thema en een tastbaar resultaat.</p></div>
+        <div data-reveal><p class="font-display text-2xl text-accent mb-2">Relaties</p><p class="text-paper/70">Een relatiedag die blijft hangen, samen op pad met de camera.</p></div>
+        <div data-reveal><p class="font-display text-2xl text-accent mb-2">Evenementbureaus</p><p class="text-paper/70">Meerdere parallelle workshops op grote evenementen, met succes ingezet.</p></div>
+      </div>
+      <a data-reveal href="#" data-nav="contact" class="inline-flex items-center gap-2 mt-12 bg-accent hover:bg-accentd text-paper font-semibold px-7 py-3.5 rounded-full transition-colors">Plan jullie workshop →</a>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================= -->
+<!-- PAGE: OVER ONS                                                 -->
+<!-- ============================================================= -->
+<section class="page" data-page="over" aria-label="Over ons">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 pt-16 md:pt-24 pb-16">
+    <div class="grid lg:grid-cols-12 gap-12 items-end">
+      <div class="lg:col-span-7">
+        <p data-reveal class="text-accent font-semibold uppercase tracking-wide text-[13px] mb-4">Over ons</p>
+        <h1 data-reveal class="font-display text-[clamp(2.3rem,5.5vw,4.5rem)] font-medium leading-[1.0] max-w-[16ch]">Fotografie die mensen <span class="italic text-accent">verbindt.</span></h1>
+        <p data-reveal class="mt-6 text-lg text-inksoft leading-relaxed max-w-[60ch]">Wij verzorgen workshops fotografie voor bedrijven, groepen en personeelsverenigingen, volledig afgestemd op het fotograferen met een smartphone. Mooie foto's maken door compositie goed te gebruiken, werken met de nieuwste foto-apps en je beelden zelf afdrukken via wifi op 15 bij 20 centimeter. Onder begeleiding van fotograaf Rob Turk, die al duizenden mensen leerde beter te fotograferen.</p>
+      </div>
+      <div data-reveal class="lg:col-span-5 rounded-2xl overflow-hidden aspect-[4/3] shadow-xl shadow-ink/10">
+        <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/foto1.jpg" alt="Een workshop fotografie in volle gang" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+    </div>
+  </div>
+
+  <!-- USP / aanpak -->
+  <section class="bg-sand py-20 md:py-24">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-10 grid md:grid-cols-3 gap-10">
+      <div data-reveal>
+        <h3 class="font-display text-2xl font-medium">Meteen geprint</h3>
+        <p class="mt-3 text-inksoft leading-relaxed">Twee supersnelle printers gaan mee, zodat je je beste opdracht aan het einde van de dag in een passe-partout in handen hebt.</p>
+      </div>
+      <div data-reveal>
+        <h3 class="font-display text-2xl font-medium">Op maat, op locatie</h3>
+        <p class="mt-3 text-inksoft leading-relaxed">Bijna alle workshops zijn incompany, door heel Nederland. We passen de creatieve opdrachten aan op jullie wensen en de beschikbare tijd.</p>
+      </div>
+      <div data-reveal>
+        <h3 class="font-display text-2xl font-medium">Leerzaam en gezellig</h3>
+        <p class="mt-3 text-inksoft leading-relaxed">Iedere deelnemer krijgt een uitgebreide hand-out mee, met onder andere alle uitleg over Snapseed. Kennis die blijft hangen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALBUM -->
+  <section class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 md:py-24">
+    <h2 data-reveal class="font-display text-[clamp(1.8rem,4vw,3rem)] font-medium mb-10">Uit de workshops</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+      <div data-reveal class="rounded-xl overflow-hidden aspect-square"><img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060712-300x201.jpg" alt="Afgedrukte foto's bekijken na de workshop" class="w-full h-full object-cover" loading="lazy" width="300" height="201" /></div>
+      <div data-reveal class="rounded-xl overflow-hidden aspect-square"><img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060658-300x203.jpg" alt="Printen via wifi op formaat 15 bij 20" class="w-full h-full object-cover" loading="lazy" width="300" height="203" /></div>
+      <div data-reveal class="rounded-xl overflow-hidden aspect-square"><img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/smartphone-300x200.jpg" alt="Fotograferen met de smartphone" class="w-full h-full object-cover" loading="lazy" width="300" height="200" /></div>
+      <div data-reveal class="rounded-xl overflow-hidden aspect-square"><img src="https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060697-300x256.jpg" alt="Bewerken met Snapseed" class="w-full h-full object-cover" loading="lazy" width="300" height="256" /></div>
+      <div data-reveal class="rounded-xl overflow-hidden aspect-square"><img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/KT5A6103-4-300x200.jpg" alt="Deelnemers actief aan de slag" class="w-full h-full object-cover" loading="lazy" width="300" height="200" /></div>
+      <div data-reveal class="rounded-xl overflow-hidden aspect-square"><img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/spiegelreflex-2-300x200.jpg" alt="Werken met de spiegelreflexcamera" class="w-full h-full object-cover" loading="lazy" width="300" height="200" /></div>
+    </div>
+  </section>
+
+  <!-- RELATIES -->
+  <section class="bg-ink text-paper py-20 md:py-24">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+      <h2 data-reveal class="font-display text-[clamp(1.8rem,4vw,3rem)] font-medium mb-3">Onze relaties</h2>
+      <p data-reveal class="text-paper/65 mb-10 max-w-[60ch]">Een greep uit de bedrijven en instellingen waarvoor we workshops verzorgden.</p>
+      <div data-reveal class="flex flex-wrap gap-x-8 gap-y-3 font-display text-lg md:text-xl text-paper/75 leading-relaxed">
+        <span>LUMC</span><span>Heembouw</span><span>ABN AMRO</span><span>Rabobank</span><span>Aegon</span><span>InHolland</span><span>GHOR Brabant</span><span>AstraZeneca</span><span>Astellas</span><span>Cognizant</span><span>Royal FloraHolland</span><span>van der Valk</span><span>GGZ Brabant</span><span>Ministerie van Infrastructuur</span><span>Waterschap Zuiderzeeland</span><span>Stek woningbouw</span><span>Meijers verzekeringen</span><span>Leolux</span><span>Habeon architecten</span><span>Belastingdienst</span><span>VNG</span><span>Lubbe Lisse</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REACTIES -->
+  <section class="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 md:py-24">
+    <h2 data-reveal class="font-display text-[clamp(1.8rem,4vw,3rem)] font-medium mb-12">Reacties</h2>
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+      <blockquote data-reveal class="border-l-2 border-accent pl-6">
+        <p class="font-display text-lg md:text-xl leading-snug">"De workshop was voor ons een fantastische manier om oude en nieuwe teamleden beter te leren kennen. Goed kijken én goed naar elkaar luisteren. De drieluiken hangen nu in lijstjes op de 'wall of staff'."</p>
+        <footer class="mt-4 text-sm text-inksoft"><span class="font-semibold text-ink">Sandra Reeb Gruber</span> · InHolland</footer>
+      </blockquote>
+      <blockquote data-reveal class="border-l-2 border-accent pl-6">
+        <p class="font-display text-lg md:text-xl leading-snug">"Rob en zijn assistente Edith verzorgden een workshop voor mijn bedrijf. Veel kennis, duidelijk en geduldig uitgelegd. Ik ga zeker nog een keer met hem op pad in de natuur of de stad."</p>
+        <footer class="mt-4 text-sm text-inksoft"><span class="font-semibold text-ink">Renee Korbee</span> · Art-Vision</footer>
+      </blockquote>
+      <blockquote data-reveal class="border-l-2 border-accent pl-6">
+        <p class="font-display text-lg md:text-xl leading-snug">"Hartelijk dank voor de foto's van de teamdag. We hebben echt een superdag gehad, er wordt nog veel over nagepraat door de collega's."</p>
+        <footer class="mt-4 text-sm text-inksoft"><span class="font-semibold text-ink">Cynthia Cornelissen</span> · GHOR Brabant</footer>
+      </blockquote>
+      <blockquote data-reveal class="border-l-2 border-accent pl-6">
+        <p class="font-display text-lg md:text-xl leading-snug">"Nogmaals dank voor de zeer geslaagde workshop. Iedereen was na afloop erg enthousiast. Graag tot een volgende keer."</p>
+        <footer class="mt-4 text-sm text-inksoft"><span class="font-semibold text-ink">Hedzer de Haan</span> · Tandartspraktijk de Haan</footer>
+      </blockquote>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================= -->
+<!-- PAGE: CONTACT                                                  -->
+<!-- ============================================================= -->
+<section class="page" data-page="contact" aria-label="Contact">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 pt-16 md:pt-24 pb-20">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+
+      <!-- LEFT: intro + details -->
+      <div>
+        <p data-reveal class="text-accent font-semibold uppercase tracking-wide text-[13px] mb-4">Contact</p>
+        <h1 data-reveal class="font-display text-[clamp(2.3rem,5.5vw,4.2rem)] font-medium leading-[1.0]">Een workshop op maat?</h1>
+        <p data-reveal class="mt-6 text-lg text-inksoft leading-relaxed max-w-[52ch]">Vertel ons over je groep, de gelegenheid en wanneer je zou willen. We denken graag mee over de invulling en de locatie en sturen je een passend voorstel.</p>
+
+        <div data-reveal class="mt-10 space-y-6">
+          <div>
+            <p class="text-sm uppercase tracking-wide text-inksoft mb-1">Telefoon</p>
+            <a href="tel:+31647769699" class="font-display text-2xl ink-line">06 47 76 96 99</a>
+          </div>
+          <div>
+            <p class="text-sm uppercase tracking-wide text-inksoft mb-1">E-mail</p>
+            <a href="mailto:info@smartphone-fotografie.nl" class="font-display text-2xl ink-line break-all">info@smartphone-fotografie.nl</a>
+          </div>
+          <div>
+            <p class="text-sm uppercase tracking-wide text-inksoft mb-1">Kantooradres</p>
+            <p class="text-lg">Hoofdstraat 185, 2171 BC Sassenheim</p>
+            <a href="https://www.google.nl/maps/place/Hoofdstraat+185,+2171+BC+Sassenheim/@52.2258455,4.518981,17z" target="_blank" rel="noopener" class="text-accent font-medium ink-line text-sm">Routebeschrijving →</a>
+          </div>
+          <div class="text-sm text-inksoft pt-2 border-t border-ink/10">
+            <p>KVK 56623569 · BTW NL1835.83.346.B02</p>
+            <p class="mt-1">Onderdeel van <a href="https://www.foto-workshop.nl" target="_blank" rel="noopener" class="text-ink ink-line">foto-workshop.nl</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div data-reveal class="bg-sand rounded-2xl p-7 md:p-9">
+        <h2 class="font-display text-2xl font-medium mb-6">Stel je vraag</h2>
+        <div class="space-y-4">
+          <div>
+            <label for="f-naam" class="block text-sm font-medium mb-1.5">Naam *</label>
+            <input id="f-naam" type="text" class="w-full rounded-lg border border-ink/15 bg-paper px-4 py-3 outline-none focus:border-accent transition-colors" placeholder="Voor- en achternaam" />
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="f-email" class="block text-sm font-medium mb-1.5">E-mail *</label>
+              <input id="f-email" type="email" class="w-full rounded-lg border border-ink/15 bg-paper px-4 py-3 outline-none focus:border-accent transition-colors" placeholder="jij@bedrijf.nl" />
             </div>
             <div>
-              <label class="block text-xs uppercase tracking-wide text-bone mb-2">Telefoonnummer</label>
-              <input name="tel" type="tel" class="w-full bg-ink border border-cream/15 rounded-md px-4 py-3 text-cream focus:border-terra focus:outline-none transition">
+              <label for="f-tel" class="block text-sm font-medium mb-1.5">Telefoon</label>
+              <input id="f-tel" type="tel" class="w-full rounded-lg border border-ink/15 bg-paper px-4 py-3 outline-none focus:border-accent transition-colors" placeholder="06 ..." />
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="f-workshop" class="block text-sm font-medium mb-1.5">Welke workshop</label>
+              <select id="f-workshop" class="w-full rounded-lg border border-ink/15 bg-paper px-4 py-3 outline-none focus:border-accent transition-colors">
+                <option>Smartphone fotografie incl. printen</option>
+                <option>Foto's bewerken met Snapseed</option>
+                <option>Spiegelreflex fotografie</option>
+                <option>Filmen met je smartphone</option>
+                <option>Lezing en presentatie smartphone fotografie</option>
+                <option>Workshop Wie ben je?</option>
+                <option>Workshop Keukenhof</option>
+                <option>Weet ik nog niet / advies gewenst</option>
+              </select>
+            </div>
+            <div>
+              <label for="f-groep" class="block text-sm font-medium mb-1.5">Groepsgrootte</label>
+              <input id="f-groep" type="text" class="w-full rounded-lg border border-ink/15 bg-paper px-4 py-3 outline-none focus:border-accent transition-colors" placeholder="bijv. 15 personen" />
             </div>
           </div>
           <div>
-            <label class="block text-xs uppercase tracking-wide text-bone mb-2">Welke workshop heeft je interesse?</label>
-            <select name="workshop" class="w-full bg-ink border border-cream/15 rounded-md px-4 py-3 text-cream focus:border-terra focus:outline-none transition">
-              <option>Smartphone fotografie incl. printen</option>
-              <option>Spiegelreflex fotografie</option>
-              <option>Foto's bewerken met Snapseed</option>
-              <option>Workshop 'Wie ben je?'</option>
-              <option>Lezing / presentatie</option>
-              <option>Weet ik nog niet, graag advies</option>
-            </select>
+            <label for="f-bericht" class="block text-sm font-medium mb-1.5">Bericht</label>
+            <textarea id="f-bericht" rows="4" class="w-full rounded-lg border border-ink/15 bg-paper px-4 py-3 outline-none focus:border-accent transition-colors" placeholder="Vertel kort over je gelegenheid, locatie en gewenste datum."></textarea>
           </div>
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-xs uppercase tracking-wide text-bone mb-2">Aantal deelnemers (indicatie)</label>
-              <input name="aantal" type="text" placeholder="bijv. 20" class="w-full bg-ink border border-cream/15 rounded-md px-4 py-3 text-cream focus:border-terra focus:outline-none transition placeholder:text-bone/40">
-            </div>
-            <div>
-              <label class="block text-xs uppercase tracking-wide text-bone mb-2">Gewenste periode</label>
-              <input name="periode" type="text" placeholder="bijv. najaar 2026" class="w-full bg-ink border border-cream/15 rounded-md px-4 py-3 text-cream focus:border-terra focus:outline-none transition placeholder:text-bone/40">
-            </div>
-          </div>
-          <div>
-            <label class="block text-xs uppercase tracking-wide text-bone mb-2">Je bericht / vraag</label>
-            <textarea name="bericht" rows="4" class="w-full bg-ink border border-cream/15 rounded-md px-4 py-3 text-cream focus:border-terra focus:outline-none transition"></textarea>
-          </div>
-          <button type="submit" class="btn-terra w-full bg-terra text-cream py-4 rounded-md font-semibold uppercase tracking-wide text-sm">Verstuur aanvraag</button>
-          <p class="text-xs text-bone/60 text-center">Je mailprogramma opent met een vooringevuld bericht aan Rob.</p>
-        </form>
+          <button id="f-submit" class="w-full bg-accent hover:bg-accentd text-paper font-semibold py-3.5 rounded-full transition-colors">Verstuur via e-mail</button>
+          <p class="text-xs text-inksoft text-center">Je eigen e-mailprogramma opent met een vooringevuld bericht aan ons.</p>
+        </div>
       </div>
     </div>
+  </div>
+
+  <!-- MAP -->
+  <div class="w-full h-[360px] md:h-[440px]">
+    <iframe
+      title="Locatie Smartphone Fotografie, Hoofdstraat 185 Sassenheim"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.9652707265336!2d4.518981015926872!3d52.22584876573901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c17c0cf98663%3A0xd0025e2f3990f1c7!2sHoofdstraat+185%2C+2171+BC+Sassenheim!5e0!3m2!1snl!2snl!4v1510840491196"
+      width="100%" height="100%" style="border:0; filter: grayscale(0.2) contrast(1.05);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </section>
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
-<footer class="bg-coal border-t border-cream/10">
-  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-12 gap-10">
-    <div class="md:col-span-5">
-      <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/test.png" alt="Smartphone Fotografie" class="h-9 w-auto object-contain mb-5" style="filter:brightness(0) invert(1)">
-      <p class="text-bone max-w-sm leading-relaxed">Beter fotograferen met je smartphone. Incompany workshops voor bedrijven, teams en personeelsverenigingen, door heel Nederland. Onderdeel van Foto-workshop.nl.</p>
-    </div>
-    <div class="md:col-span-3">
-      <h4 class="text-xs uppercase tracking-[0.2em] text-ember mb-4">Navigatie</h4>
-      <ul class="space-y-2 text-bone">
-        <li><a data-nav="workshops" class="hover:text-cream transition cursor-pointer">Workshops</a></li>
-        <li><a data-nav="over" class="hover:text-cream transition cursor-pointer">Over Rob</a></li>
-        <li><a data-nav="reviews" class="hover:text-cream transition cursor-pointer">Reacties</a></li>
-        <li><a data-nav="klanten" class="hover:text-cream transition cursor-pointer">Klanten</a></li>
-        <li><a data-nav="contact" class="hover:text-cream transition cursor-pointer">Contact</a></li>
-      </ul>
-    </div>
-    <div class="md:col-span-4">
-      <h4 class="text-xs uppercase tracking-[0.2em] text-ember mb-4">Contact</h4>
-      <ul class="space-y-2 text-bone">
-        <li><a href="tel:+31647769699" class="hover:text-cream transition">06 47 769 699</a></li>
-        <li><a href="mailto:info@smartphone-fotografie.nl" class="hover:text-cream transition">info@smartphone-fotografie.nl</a></li>
-        <li>Hoofdstraat 185, 2171 BC Sassenheim</li>
-      </ul>
-      <div class="flex gap-4 mt-5 text-sm">
-        <a href="https://www.facebook.com/fotoworkshopnl" target="_blank" rel="noopener" class="text-bone hover:text-ember transition">Facebook</a>
-        <a href="https://www.instagram.com/foto_workshopnl/" target="_blank" rel="noopener" class="text-bone hover:text-ember transition">Instagram</a>
-        <a href="https://twitter.com/smartfotografie" target="_blank" rel="noopener" class="text-bone hover:text-ember transition">X</a>
-        <a href="https://www.linkedin.com/pub/rob-turk/b/13/434" target="_blank" rel="noopener" class="text-bone hover:text-ember transition">LinkedIn</a>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-ink text-paper/80">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-16">
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <img src="https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/test.png" alt="Smartphone Fotografie" class="h-10 w-auto max-w-[50%] object-contain mb-5" style="filter:brightness(0) invert(1)" loading="lazy" />
+        <p class="max-w-[42ch] leading-relaxed text-paper/70">Incompany workshops fotografie voor bedrijven, teams en personeelsverenigingen. Beter leren fotograferen met je smartphone, bewerken én je resultaten meteen geprint.</p>
+      </div>
+      <div class="md:col-span-3">
+        <p class="text-sm uppercase tracking-wide text-paper/50 mb-4">Menu</p>
+        <ul class="space-y-2">
+          <li><a href="#" data-nav="home" class="ink-line hover:text-paper">Home</a></li>
+          <li><a href="#" data-nav="workshops" class="ink-line hover:text-paper">Workshops</a></li>
+          <li><a href="#" data-nav="over" class="ink-line hover:text-paper">Over ons</a></li>
+          <li><a href="#" data-nav="contact" class="ink-line hover:text-paper">Contact</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <p class="text-sm uppercase tracking-wide text-paper/50 mb-4">Contact</p>
+        <ul class="space-y-2">
+          <li><a href="tel:+31647769699" class="ink-line hover:text-paper">06 47 76 96 99</a></li>
+          <li><a href="mailto:info@smartphone-fotografie.nl" class="ink-line hover:text-paper break-all">info@smartphone-fotografie.nl</a></li>
+          <li class="text-paper/70">Hoofdstraat 185, 2171 BC Sassenheim</li>
+        </ul>
+        <div class="flex gap-4 mt-5 text-paper/70">
+          <a href="https://www.facebook.com/fotoworkshopnl" target="_blank" rel="noopener" class="hover:text-paper ink-line">Facebook</a>
+          <a href="https://www.linkedin.com/in/rob-turk-434013b/" target="_blank" rel="noopener" class="hover:text-paper ink-line">LinkedIn</a>
+          <a href="https://twitter.com/smartfotografie" target="_blank" rel="noopener" class="hover:text-paper ink-line">X</a>
+          <a href="https://www.pinterest.com/fotoworkshopnl/iphone-fotografie/" target="_blank" rel="noopener" class="hover:text-paper ink-line">Pinterest</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="border-t border-cream/10">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-5 flex flex-col sm:flex-row justify-between gap-2 text-xs text-bone/60">
-      <p>© <span id="year"></span> Smartphone Fotografie · Alle rechten voorbehouden</p>
-      <p>Onderdeel van <a href="https://www.foto-workshop.nl" target="_blank" rel="noopener" class="hover:text-cream transition">Foto-workshop.nl</a></p>
+    <div class="mt-14 pt-6 border-t border-paper/15 flex flex-col sm:flex-row justify-between gap-3 text-sm text-paper/55">
+      <p>© <span id="year"></span> Smartphone Fotografie · Onderdeel van foto-workshop.nl</p>
+      <p>KVK 56623569 · BTW NL1835.83.346.B02</p>
     </div>
   </div>
 </footer>
 
 <!-- FLOATING CALL BUTTON -->
-<a href="tel:+31647769699" class="fixed bottom-5 right-5 z-40 btn-terra bg-terra text-cream w-14 h-14 rounded-full flex items-center justify-center shadow-2xl shadow-terra/40" aria-label="Bel ons">
-  <span class="text-xl">✆</span>
+<a href="tel:+31647769699" class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 bg-accent hover:bg-accentd text-paper font-semibold px-5 py-3.5 rounded-full shadow-lg shadow-ink/25 transition-colors" aria-label="Bel ons">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  <span class="hidden sm:inline">Bel ons</span>
 </a>
 
 <script>
-/* ---------------- DATA ---------------- */
-const workshops = [
-  {
-    id:'smartphone',
-    title:'Smartphone fotografie incl. printen',
-    short:'De klassieker. Beter fotograferen met je telefoon en je resultaten direct printen.',
-    img:'https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/KT5A1327-1024x419.jpg',
-    body:'Er worden steeds meer foto\'s gemaakt met de smartphone, en ze worden steeds beter. In deze workshop leer je de nieuwste techniek in je toestel optimaal benutten, werken met de beste camera-apps en je beelden bewerken op dezelfde telefoon of tablet. Je print je foto\'s zelf via WiFi op twee supersnelle Mitsubishi-printers, op groot formaat in een passe-partout. Geschikt voor iedereen met een iOS- of Android-toestel. Normaal duurt de workshop drie uur, maar de lengte stemmen we af op jullie groep en beschikbare tijd.',
-    extra:'Voor groepen van 8 tot 60 personen · Incompany door heel Nederland'
-  },
-  {
-    id:'spiegelreflex',
-    title:'Spiegelreflex fotografie',
-    short:'Fotografie als middel om creatief samen te werken en beter te leren kijken.',
-    img:'https://www.smartphone-fotografie.nl/wp-content/uploads/2017/08/spiegelreflex.jpg',
-    body:'Voor bedrijven en groepen waarbij fotografie het middel is om creatief samen te werken en beter te leren kijken. Wij beschikken over Canon EOS-camera\'s voor wie geen eigen camera heeft, plus laptops om de foto\'s te bewerken. Met onze Canon Pixma-printers print je de opdrachten van de dag zelf op groot formaat en neem je de vergrotingen mee naar huis. Wordt de workshop ingezet voor teambuilding? Dan kan er een coach worden ingeschakeld die processen en interacties analyseert; daarvoor werken we samen met Feedbackconsulting.',
-    extra:'Duur van 2 uur tot een hele dag · Thema in overleg'
-  },
-  {
-    id:'bewerken',
-    title:'Foto\'s bewerken met Snapseed',
-    short:'Haal meer uit je beelden met de gratis, verrassend krachtige app Snapseed.',
-    img:'https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060697-300x256.jpg',
-    body:'Snapseed heeft vrijwel dezelfde mogelijkheden als professionele bewerkingssoftware, maar dan in een gebruiksvriendelijke app. Je leert je mooiste beelden uitzoeken, foto\'s rechtzetten, uitsnijden, lokaal bewerken, verscherpen en tekst toevoegen, en deze delen op sociale media. Ideaal voor personeelsverenigingen, fotoclubs en amateurfotografen die hun beelden beter willen archiveren en bewerken. Beschikbaar voor iOS en Android.',
-    extra:'Inclusief uitgebreide hand-out over Snapseed'
-  },
-  {
-    id:'wieben',
-    title:'Workshop \u2018Wie ben je?\u2019',
-    short:'Een drieluik maken van een collega of relatie. Goed kijken én goed luisteren.',
-    img:'https://www.smartphone-fotografie.nl/wp-content/uploads/2017/09/slidebanner4.jpg',
-    body:'Bij deze workshop leg je eerst contact met je collega, vriend of relatie waarmee je samenwerkt. De bedoeling is om in een drieluik iemand uit te beelden waarbij hobby, interesse, vakgebied of uitstraling duidelijk naar voren komt. Dan moet je niet alleen goed kijken, maar ook goed naar elkaar luisteren. In overleg bepaal je samen welke foto\'s de ander het beste weergeven. Een verrassend persoonlijke en verbindende opdracht.',
-    extra:'Sterk voor teambuilding en kennismaking'
-  },
-  {
-    id:'presentatie',
-    title:'Lezing & presentatie smartphone fotografie',
-    short:'Een heldere, interactieve presentatie over de kracht van smartphone fotografie.',
-    img:'https://smartphone-fotografie.nl/wp-content/uploads/2017/11/L1060470-1024x768.jpg',
-    body:'Voor jullie teamdag verzorgen we een heldere presentatie of lezing over de voordelen van smartphone fotografie voor medewerkers en klanten. In overleg focussen we op beter fotograferen, het bewerken van beelden op tablet of telefoon, of het slim toepassen van foto\'s op social media zoals Instagram, Facebook en Pinterest. Het kan een interactieve sessie zijn waarbij deelnemers in de zaal zelf content aanleveren en zo betrokkenheid voelen bij jullie organisatie.',
-    extra:'Eerder verzorgd o.a. op de KNVB Campus in Zeist'
-  }
-];
-
-const reviews = [
-  { quote:'De workshop smartphone fotografie was voor ons een fantastische manier om oude en nieuwe leden van ons team beter te leren kennen. In 3 uurtjes onder super begeleiding leren over fotografie-apps en compositie, zelf aan de slag en hilarische taferelen met die kleine WiFi-printertjes. De drieluiken hangen inmiddels in mooie lijstjes aan onze \u2018wall of staff\u2019: elke dag weer een leuke reminder aan een superleuke workshop!', name:'Sandra Reeb Gruber', org:'InHolland' },
-  { quote:'Rob heeft veel kennis van de vele mogelijkheden en apps en legt alles op een hele duidelijke en geduldige wijze uit. De groep was heel enthousiast over het resultaat. Het is ongelofelijk hoeveel creativiteit er naar boven kwam dankzij Rob\u2019s workshop. Ik ga zeker nog een keer met hem op pad.', name:'Renee Korbee', org:'Art-Vision' },
-  { quote:'Hartelijk dank voor het sturen van de foto\u2019s van de teamdag. We hebben echt een superdag gehad. Er wordt nog veel over nagepraat door de collega\u2019s.', name:'Cynthia Cornelissen', org:'GHOR Brabant' },
-  { quote:'Nogmaals hartelijk dank aan jullie beiden voor de zeer geslaagde workshop. Iedereen was na afloop erg enthousiast. We hebben daarna heerlijk gegeten. Graag tot een volgende keer.', name:'Hedzer de Haan', org:'Tandartspraktijk de Haan' }
-];
-
-const clients = ['LUMC','Rabobank','ABN AMRO','Aegon','Heembouw','InHolland','Astellas','AstraZeneca','Cognizant','Van der Valk','Meijers Verzekeringen','Stek Woningbouw','GHOR','Belastingdienst','Ministerie van I&W','Waterschap Zuiderzeeland','Gemeente Teylingen','Gemeente Gouda','Habeon Architecten','Leolux','Royal FloraHolland','VNG'];
-
-/* ---------------- RENDER ---------------- */
-// Home workshops (split rows)
-const homeWrap = document.getElementById('homeWorkshops');
-workshops.forEach((w,i)=>{
-  const row = document.createElement('div');
-  row.className = 'reveal group grid md:grid-cols-12 gap-5 items-center border-t border-cream/10 pt-6 cursor-pointer';
-  row.innerHTML = `
-    <div class="md:col-span-1 font-display text-ember text-2xl">0${i+1}</div>
-    <div class="md:col-span-3 overflow-hidden rounded-sm">
-      <img src="${w.img}" alt="${w.title}" loading="lazy" class="w-full h-28 object-cover group-hover:scale-105 transition duration-700">
-    </div>
-    <div class="md:col-span-6">
-      <h3 class="font-display text-2xl md:text-3xl mb-1 group-hover:text-ember transition">${w.title}</h3>
-      <p class="text-bone">${w.short}</p>
-    </div>
-    <div class="md:col-span-2 md:text-right text-ember text-2xl group-hover:translate-x-1 transition">→</div>`;
-  row.addEventListener('click',()=>{ goTo('workshops'); setTimeout(()=>{ const el=document.getElementById('ws-'+w.id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); },120); });
-  homeWrap.appendChild(row);
-});
-
-// Workshop detail
-const detail = document.getElementById('workshopDetail');
-workshops.forEach((w,i)=>{
-  const sec = document.createElement('article');
-  sec.id = 'ws-'+w.id;
-  sec.className = `grid lg:grid-cols-2 gap-8 lg:gap-14 items-center ${i%2?'lg:[direction:rtl]':''}`;
-  sec.innerHTML = `
-    <div class="reveal-img photo-tilt lens-ring rounded-sm overflow-hidden [direction:ltr]">
-      <img src="${w.img}" alt="${w.title}" loading="lazy" class="w-full h-[300px] md:h-[420px] object-cover">
-    </div>
-    <div class="[direction:ltr]">
-      <span class="font-display text-ember text-5xl">0${i+1}</span>
-      <h2 class="reveal font-display font-light text-3xl md:text-5xl mt-2 mb-4">${w.title}</h2>
-      <p class="reveal text-sand leading-relaxed text-lg">${w.body}</p>
-      <p class="reveal mt-4 text-sm text-ember uppercase tracking-wide">${w.extra}</p>
-      <a data-nav="contact" class="reveal inline-flex items-center gap-2 mt-6 font-semibold border-b border-terra pb-1 cursor-pointer group [direction:ltr]">Boek deze workshop <span class="group-hover:translate-x-1 transition">→</span></a>
-    </div>`;
-  detail.appendChild(sec);
-});
-
-// Reviews
-const rg = document.getElementById('reviewGrid');
-reviews.forEach(r=>{
-  const c = document.createElement('div');
-  c.className = 'reveal bg-coal border border-cream/10 rounded-md p-7 md:p-9 flex flex-col';
-  c.innerHTML = `
-    <div class="text-ember text-3xl mb-4 font-display leading-none">"</div>
-    <p class="text-sand leading-relaxed flex-1">${r.quote}</p>
-    <div class="mt-6 pt-5 border-t border-cream/10">
-      <span class="text-cream font-semibold block">${r.name}</span>
-      <span class="text-bone text-sm">${r.org}</span>
-    </div>`;
-  rg.appendChild(c);
-});
-
-// Clients marquee (duplicated for seamless loop)
-const mq = document.getElementById('logoMarquee');
-const mqHtml = clients.map(c=>`<span class="font-display text-xl md:text-2xl text-bone/70 px-8 whitespace-nowrap">${c}</span>`).join('<span class="text-terra px-1">·</span>');
-mq.innerHTML = `<div class="flex items-center">${mqHtml}</div><div class="flex items-center">${mqHtml}</div>`;
-
-// Client grid
-const cg = document.getElementById('clientGrid');
-clients.forEach(c=>{
-  const d = document.createElement('div');
-  d.className = 'reveal bg-ink hover:bg-coal transition flex items-center justify-center text-center px-4 py-8 min-h-[96px]';
-  d.innerHTML = `<span class="font-display text-lg md:text-xl text-cream/85">${c}</span>`;
-  cg.appendChild(d);
-});
-
+/* ---------------- YEAR ---------------- */
 document.getElementById('year').textContent = new Date().getFullYear();
-
-/* ---------------- NAV / ROUTING ---------------- */
-const pages = document.querySelectorAll('.page');
-const header = document.getElementById('siteHeader');
-
-function setHeaderStyle(){
-  if(window.scrollY > 40){ header.classList.add('bg-ink/90','backdrop-blur-md','border-b','border-cream/10'); }
-  else{ header.classList.remove('bg-ink/90','backdrop-blur-md','border-b','border-cream/10'); }
-}
-window.addEventListener('scroll', setHeaderStyle); setHeaderStyle();
-
-function goTo(name){
-  pages.forEach(p=> p.classList.toggle('active', p.dataset.page===name));
-  document.querySelectorAll('.nav-link').forEach(l=> l.classList.toggle('active', l.dataset.nav===name));
-  closeMenu();
-  window.scrollTo({top:0, behavior:'instant'});
-  setHeaderStyle();
-  initReveals();
-}
-
-document.querySelectorAll('[data-nav]').forEach(el=>{
-  el.addEventListener('click',(e)=>{ e.preventDefault(); goTo(el.dataset.nav); });
-});
-
-/* ---------------- MOBILE MENU ---------------- */
-const burger=document.getElementById('burger'), menu=document.getElementById('mobileMenu');
-const b1=document.getElementById('b1'),b2=document.getElementById('b2'),b3=document.getElementById('b3');
-let open=false;
-function toggleMenu(){ open=!open; menu.classList.toggle('translate-x-full',!open);
-  b1.classList.toggle('rotate-45',open); b1.classList.toggle('translate-y-[7px]',open);
-  b2.classList.toggle('opacity-0',open);
-  b3.classList.toggle('-rotate-45',open); b3.classList.toggle('-translate-y-[7px]',open);
-}
-function closeMenu(){ if(open) toggleMenu(); }
-burger.addEventListener('click',toggleMenu);
-
-/* ---------------- CONTACT FORM (mailto) ---------------- */
-document.getElementById('contactForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  const f=e.target;
-  const body=`Naam: ${f.naam.value}%0D%0AOrganisatie: ${f.org.value}%0D%0AE-mail: ${f.email.value}%0D%0ATelefoon: ${f.tel.value}%0D%0AWorkshop: ${f.workshop.value}%0D%0AAantal deelnemers: ${f.aantal.value}%0D%0AGewenste periode: ${f.periode.value}%0D%0A%0D%0ABericht:%0D%0A${encodeURIComponent(f.bericht.value)}`;
-  const subject=`Workshopaanvraag: ${f.workshop.value}`;
-  window.location.href=`mailto:info@smartphone-fotografie.nl?subject=${encodeURIComponent(subject)}&body=${body}`;
-});
 
 /* ---------------- LENIS SMOOTH SCROLL ---------------- */
 let lenis;
-if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  lenis = new Lenis({ duration:1.1, smoothWheel:true });
-  function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+if (window.Lenis) {
+  lenis = new Lenis({ duration: 1.1, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+  function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
   requestAnimationFrame(raf);
-  lenis.on('scroll', setHeaderStyle);
 }
 
-/* ---------------- GSAP REVEALS ---------------- */
+/* ---------------- GSAP ---------------- */
 gsap.registerPlugin(ScrollTrigger);
-function initReveals(){
-  ScrollTrigger.getAll().forEach(s=>s.kill());
-  const active = document.querySelector('.page.active');
-  if(!active) return;
+if (lenis) { lenis.on('scroll', ScrollTrigger.update); }
 
-  // Page-load orchestration on the active page
-  const items = active.querySelectorAll('.reveal, .reveal-img');
-  items.forEach(el=> gsap.set(el,{clearProps:'all'}));
+/* ---------------- HEADER ON SCROLL ---------------- */
+const header = document.getElementById('siteHeader');
+function onScroll(){
+  if (window.scrollY > 20) {
+    header.classList.add('bg-paper/90','backdrop-blur-md','shadow-sm','shadow-ink/5');
+  } else {
+    header.classList.remove('bg-paper/90','backdrop-blur-md','shadow-sm','shadow-ink/5');
+  }
+}
+window.addEventListener('scroll', onScroll, { passive:true });
+onScroll();
 
-  // Hero / first-screen staggered load
-  const firstScreen = Array.from(items).slice(0,7);
-  gsap.fromTo(firstScreen,
-    {opacity:0, y:30},
-    {opacity:1, y:0, duration:.9, stagger:.09, ease:'power3.out', delay:.1});
-  firstScreen.forEach(el=>{ if(el.classList.contains('reveal-img')) gsap.fromTo(el,{clipPath:'inset(0 0 100% 0)'},{clipPath:'inset(0 0 0% 0)',duration:1,ease:'power3.out',delay:.2}); });
-
-  // Scroll-triggered reveals for the rest
-  Array.from(items).slice(7).forEach(el=>{
-    const isImg = el.classList.contains('reveal-img');
-    gsap.fromTo(el,
-      isImg ? {clipPath:'inset(0 0 100% 0)', opacity:1} : {opacity:0, y:32},
-      {
-        opacity:1, y:0, clipPath: isImg?'inset(0 0 0% 0)':'none', duration:.9, ease:'power3.out',
-        scrollTrigger:{ trigger:el, start:'top 88%' }
-      });
+/* ---------------- REVEALS ---------------- */
+function clearReveals(){
+  ScrollTrigger.getAll().forEach(t => { if (t.vars && t.vars.id === 'reveal') t.kill(); });
+}
+function setupReveals(scope){
+  const els = scope.querySelectorAll('[data-reveal]');
+  els.forEach((el, i) => {
+    gsap.set(el, { opacity: 0, y: 28 });
+    gsap.to(el, {
+      opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { id: 'reveal', trigger: el, start: 'top 88%', once: true }
+    });
   });
   ScrollTrigger.refresh();
 }
-window.addEventListener('load', initReveals);
-initReveals();
+
+/* ---------------- COUNTERS ---------------- */
+function setupCounters(scope){
+  scope.querySelectorAll('[data-count]').forEach(el => {
+    const target = +el.getAttribute('data-count');
+    const obj = { v: 0 };
+    ScrollTrigger.create({
+      trigger: el, start: 'top 90%', once: true,
+      onEnter: () => gsap.to(obj, { v: target, duration: 1.6, ease: 'power2.out',
+        onUpdate: () => { el.textContent = Math.round(obj.v).toLocaleString('nl-NL'); } })
+    });
+  });
+}
+
+/* ---------------- HERO TIMELINE ---------------- */
+function playHero(){
+  const items = document.querySelectorAll('[data-page="home"] [data-hero]');
+  if (!items.length) return;
+  gsap.set(items, { opacity: 0, y: 30 });
+  gsap.to(items, { opacity: 1, y: 0, duration: 1, ease: 'power3.out', stagger: 0.12, delay: 0.15 });
+  const hero = document.getElementById('heroImg');
+  if (hero) {
+    gsap.fromTo(hero, { scale: 1.14 }, { scale: 1.08, duration: 1.8, ease: 'power2.out' });
+    gsap.to(hero, { yPercent: 12, ease: 'none',
+      scrollTrigger: { id:'reveal', trigger: hero, start: 'top top', end: 'bottom top', scrub: true } });
+  }
+}
+
+/* ---------------- PAGE ROUTER ---------------- */
+const pages = document.querySelectorAll('.page');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function setActiveNav(name){
+  navLinks.forEach(l => {
+    const on = l.getAttribute('data-nav') === name;
+    l.classList.toggle('text-accent', on);
+    l.classList.toggle('text-ink', !on);
+  });
+}
+
+function showPage(name, scrollTop = true){
+  const target = document.querySelector('.page[data-page="'+name+'"]') || document.querySelector('.page[data-page="home"]');
+  pages.forEach(p => p.classList.remove('is-active'));
+  target.classList.add('is-active');
+
+  setActiveNav(name);
+  clearReveals();
+
+  if (scrollTop) {
+    if (lenis) lenis.scrollTo(0, { immediate: true }); else window.scrollTo(0,0);
+  }
+
+  // re-init animations for the visible page
+  requestAnimationFrame(() => {
+    if (name === 'home') playHero();
+    setupReveals(target);
+    setupCounters(target);
+    onScroll();
+  });
+
+  history.replaceState(null, '', '#' + name);
+}
+
+/* nav clicks (delegated) */
+document.addEventListener('click', e => {
+  const link = e.target.closest('[data-nav]');
+  if (link) {
+    e.preventDefault();
+    showPage(link.getAttribute('data-nav'));
+    closeMenu();
+    return;
+  }
+  const ws = e.target.closest('[data-workshop]');
+  if (ws) {
+    e.preventDefault();
+    showPage('contact');
+    setTimeout(() => {
+      const sel = document.getElementById('f-workshop');
+      const val = ws.getAttribute('data-workshop');
+      if (sel) { [...sel.options].forEach(o => { if (o.value === val || o.text === val) sel.value = o.value; }); }
+      const naam = document.getElementById('f-naam'); if (naam) naam.focus();
+    }, 400);
+  }
+});
+
+/* ---------------- MOBILE MENU ---------------- */
+const menu = document.getElementById('mobileMenu');
+const menuBtn = document.getElementById('menuBtn');
+const menuClose = document.getElementById('menuClose');
+function openMenu(){ menu.classList.remove('closed'); menuBtn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; if(lenis) lenis.stop(); }
+function closeMenu(){ menu.classList.add('closed'); menuBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; if(lenis) lenis.start(); }
+menuBtn.addEventListener('click', openMenu);
+menuClose.addEventListener('click', closeMenu);
+
+/* ---------------- CONTACT FORM -> MAILTO ---------------- */
+document.getElementById('f-submit').addEventListener('click', () => {
+  const v = id => (document.getElementById(id)?.value || '').trim();
+  const naam = v('f-naam'), email = v('f-email'), tel = v('f-tel'),
+        workshop = document.getElementById('f-workshop').value,
+        groep = v('f-groep'), bericht = v('f-bericht');
+  if (!naam || !email) { alert('Vul je naam en e-mailadres in, dan kunnen we je bereiken.'); return; }
+  const subject = 'Aanvraag workshop: ' + workshop;
+  const body =
+    'Hallo Smartphone Fotografie,%0D%0A%0D%0A' +
+    'Ik ben geïnteresseerd in een workshop.%0D%0A%0D%0A' +
+    'Naam: ' + encodeURIComponent(naam) + '%0D%0A' +
+    'E-mail: ' + encodeURIComponent(email) + '%0D%0A' +
+    'Telefoon: ' + encodeURIComponent(tel || '-') + '%0D%0A' +
+    'Workshop: ' + encodeURIComponent(workshop) + '%0D%0A' +
+    'Groepsgrootte: ' + encodeURIComponent(groep || '-') + '%0D%0A%0D%0A' +
+    'Bericht:%0D%0A' + encodeURIComponent(bericht || '-') + '%0D%0A';
+  window.location.href = 'mailto:info@smartphone-fotografie.nl?subject=' + encodeURIComponent(subject) + '&body=' + body;
+});
+
+/* ---------------- INIT ---------------- */
+const initial = (location.hash || '#home').replace('#','');
+showPage(['home','workshops','over','contact'].includes(initial) ? initial : 'home', false);
 </script>
 </body>
 </html>
